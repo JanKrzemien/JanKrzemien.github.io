@@ -1,0 +1,577 @@
+@import "gotowe-elementy";
+//Mapy
+@kolory: {
+    tloStrony: #aca8a1;
+    niebieskiLinki: #105289;
+    czerownyHover: #c92851;
+    szaryText: #4c577d;
+    color1: #515d66;
+    color2: #7c8891;
+    color3: #555555;
+    color4: #d9d9d9;
+    color5: #8f8f8f;
+    color6: #dcdee2; 
+    color7: #ecd5d8;
+    color8: #938ca2;
+    color9: #e8ecee;
+    color10: #edf2f5;
+    color11: #6c6c6c;
+}
+//Mapy - koniec
+//Zmienne
+@maxWysokoscStrony: 1920px;
+@wysokoscLini: 78px;
+//Zmienne - koniec
+body {margin: 0;padding: 0;background: @kolory[tloStrony];box-sizing: border-box;font-family: Verdana, Helvetica, Arial, sans-serif;}
+.body {
+    width: 1200px;
+    height: @maxWysokoscStrony;
+    background: white;
+    margin: 30px auto 30px auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 1px grey;
+    .cieniowanie {
+        width: 1196px;
+        height: @maxWysokoscStrony - 4px;
+        background: white;
+        border-radius: 15px;
+        margin: 2px;
+        box-shadow: inset 0px 0px 15px 1px lightgrey;
+        .tresc {
+            width: 1150px;
+            height: @maxWysokoscStrony - 32px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 10px auto 10px;
+            grid-template-rows: 94px 70px 40px 45px 200px 285px 285px 365px 200px 60px 60px 60px 60px 60px;
+            .header {
+                grid-row: ~"1";
+                grid-column: ~"2";
+                background-image: linear-gradient(@kolory[color1], @kolory[color2]);
+                border-radius: 8px;
+                padding: 5px;
+                margin: 14px 0 5px 0;
+                display: grid;
+                grid-template-columns: 525px auto 208px;
+                grid-template-rows: 65px;
+                .logoINaglowek {
+                    display: flex;
+                    flex-direction: row;
+                    grid-row: ~"1";
+                    grid-column: ~"1";
+                    .logo {
+                        width: 175px;
+                        height: 65px;
+                        .logoOdnosnik {
+                            width: 152px;
+                            height: 60px;
+                            display: inline-block;
+                            padding: 5px 13px 0 10px;
+                            .logoImg {
+                                width: 152px;
+                                height: 60px;
+                            }
+                        }
+                    }
+                    .naglowek {
+                        height: 65px;
+                        width: 350px;
+                        h1 {
+                            color: white;
+                            font-weight: bold;
+                            font-size: large;
+                        }
+                    }
+                }
+                .pasekWyszukiwania {
+                    grid-row: ~"1";
+                    grid-column: ~"3";
+                    .flex-row();
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    .wyszukiwanie {
+                        height: 24px;
+                        width: 208px;
+                        .flex-row();
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        box-shadow: 0 0 10px 1px @kolory[color3];
+                        input {
+                            width: 144px;
+                            height: 18px;
+                            padding: 3px;
+                            border: none;
+                            outline: none;
+                            border-top-left-radius: 6px;
+                            border-bottom-left-radius: 6px;
+                        }
+                        .lupa {
+                            width: 28px;
+                            height: 24px;
+                            background-image: linear-gradient(white, @kolory[color4]);
+                            border-left: inset 1px white;
+                            border-right: inset 1px #b1b1b1;
+                            &:hover {
+                                background-image: linear-gradient(@kolory[color4], white);
+                                cursor: pointer;
+                            }
+                        }
+                        .opcje {
+                            width: 28px;
+                            height: 24px;
+                            background-image: linear-gradient(white, @kolory[color4]);
+                            border-top-right-radius: 6px;
+                            border-bottom-right-radius: 6px;
+                            text-align: center;
+                            p {
+                                color: @kolory[color5];
+                                font-size: large;
+                                font-weight: bold;
+                                margin: 0px;
+                            }
+                            &:hover {
+                                background-image: linear-gradient(@kolory[color4], white);
+                                cursor: pointer;
+                                p {
+                                    color: @kolory[niebieskiLinki];
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .nawigacja {
+                grid-row: ~"2";
+                grid-column: ~"2";
+                padding: 3px 10px 3px 10px;
+                background: @kolory[color6];
+                border-radius: 8px;
+                margin: 0 0 5px 0;
+                position: relative;
+                display: grid;
+                grid-template-columns: 120px auto 200px;
+                grid-template-rows: 25px 1px 25px;
+                .lewaUpNaw {
+                    grid-row: ~"1";
+                    grid-column: ~"1";
+                    a {
+                        display: inline-block;
+                        height: 25px;
+                        text-decoration: none;
+                        font-size: 11px;
+                        color: @kolory[niebieskiLinki];
+                        span {
+                            padding: 0;
+                            margin: 0;
+                        }
+                        &:hover {
+                            color: red;
+                            span {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .prawaUpNaw {
+                    grid-row: ~"1";
+                    grid-column: ~"3";
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+                    a {
+                        display: inline-block;
+                        height: 25px;
+                        text-decoration: none;
+                        font-size: 11px;
+                        padding-right: 8px;
+                        line-height: 25px;
+                        color: @kolory[niebieskiLinki];
+                        span {
+                            padding: 0;
+                            margin: 0;
+                        }
+                        &:hover {
+                            color: red;
+                            span {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .pasek {background: white;grid-row: ~"2";grid-column: ~"1/4";}
+                .lewaDownNaw {
+                    grid-row: ~"3";
+                    grid-column: ~"1";
+                    a {
+                        display: inline-block;
+                        height: 25px;
+                        text-decoration: none;
+                        font-size: 11px;
+                        color: @kolory[niebieskiLinki];
+                        span {
+                            padding: 0;
+                            margin: 0;
+                        }
+                        &:hover {
+                            color: red;
+                            span {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+            .link {
+                grid-row: ~"3";
+                grid-column: ~"2";
+                padding: 10px;
+                background: @kolory[color7];
+                border-radius: 8px;
+                display: grid;
+                grid-template-columns: auto 400px auto;
+                a {
+                    grid-column: ~"2";
+                    display: inline-block;
+                    font-size: 20px;
+                    color: darkred;
+                    text-decoration: underline @kolory[niebieskiLinki];
+                    &:hover {
+                        background: lightblue;
+                    }
+                }
+            }
+            .dataDiv {
+                text-align: right;
+                grid-column: ~"2";
+                grid-row: ~"4";
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                .data {
+                    margin-bottom: 10px;
+                    color: @kolory[color8];
+                    font-size: 12px;
+                }
+            }
+            #f1 {grid-column: ~"2";grid-row: ~"5";}
+            #f2 {grid-column: ~"2";grid-row: ~"6";}
+            #f3 {grid-column: ~"2";grid-row: ~"7";}
+            #f4 {grid-column: ~"2";grid-row: ~"8";}
+            #f5 {grid-column: ~"2";grid-row: ~"9";}
+            .forum {
+                padding: 5px;
+                margin-bottom: 4px;
+                background-image: linear-gradient(@kolory[color2], @kolory[color1]);
+                border-radius: 8px;
+                .gora {
+                    height: 10px;
+                    margin: 0 0 4px 0;
+                    display: grid;
+                    grid-template-columns: 110px auto 106px 106px 212px;
+                    .cell {
+                        height: 10px;
+                        float: left;
+                        a, p {
+                            font-size: 11px;
+                            font-weight: 500;
+                            text-decoration: none;
+                            margin: 0;
+                            color: white;
+                        }
+                        a:hover {
+                            color: lightblue;
+                            text-decoration: underline;
+                        }
+                        &::after {
+                            content: "";
+                            display: block;
+                            clear: both;
+                        }
+                    }
+                }
+                .linia {
+                    height: @wysokoscLini;
+                    padding: 2px 0 2px 0;
+                    margin-bottom: 1px;
+                    background: @kolory[color9];
+                    display: grid;
+                    grid-template-columns: 50px auto 106px 106px 212px;
+                    &:hover {
+                        background: @kolory[color10];
+                        .cell {
+                            border-left: solid 1px @kolory[color11];
+                            border-right: solid 1px @kolory[color11];
+                        } 
+                    }
+                    .dziwnyZnaczekContainer {
+                        height: 48px;
+                        width: 50px;
+                        margin: auto 0 auto 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .dziwnyZnaczek {
+                            height: 30px;
+                            width: 30px;
+                            border-radius: 50%;
+                            position: relative;
+                            .mniejszzyDziwnyZnaczek {
+                                height: 15px;
+                                width: 15px;
+                                border-radius: 50%;
+                                position: absolute;
+                                bottom: 0px;
+                                right: 0px;
+                            }
+                        }
+                    }
+                    .cell {
+                        border-left: solid 1px white;
+                        border-right: solid 1px white;
+                        p {
+                            font-size: 11px;
+                            font-weight: 500;
+                            text-decoration: none;
+                            margin: 0;
+                            color: @kolory[szaryText];
+                            #underlineNeeded:hover {
+                                text-decoration: underline;
+                            }
+                            a {
+                                font-size: 12px;
+                                font-weight: bold;
+                                text-decoration: none;
+                                color: @kolory[niebieskiLinki];
+                                &:hover {
+                                    color: @kolory[czerownyHover];
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #for1 {grid-column: ~"2"; grid-row: "10";}
+            #for2 {grid-column: ~"2"; grid-row: "11";}
+            #for3 {grid-column: ~"2"; grid-row: "12";}
+            #for4 {grid-column: ~"2"; grid-row: "13";}
+            .formularz {
+                margin-top: 20px;
+                position: relative;
+                p, label {
+                    font-size: 11px;
+                    font-weight: 500;
+                    text-decoration: none;
+                    margin: 0;
+                    color: @kolory[szaryText];
+                    #underlineNeeded:hover {
+                        text-decoration: underline;
+                    }
+                    a {
+                        font-size: 12px;
+                        text-decoration: none;
+                        color: @kolory[niebieskiLinki];
+                        &:hover {
+                            color: @kolory[czerownyHover];
+                        }
+                    }
+                }
+                .pasek {
+                    width: calc(100% - 15px);
+                    height: 0.5px;
+                    background: @kolory[color11];
+                }
+                input {
+                    background: @kolory[color9];
+                    border: solid 1px @kolory[color11];
+                    margin-top: 5px;
+                }
+                button {
+                    width: 75px;
+                    height: 20px;
+                    margin-top: 5px;
+                    font-size: 12px;
+                    background-image: linear-gradient(@kolory[color4], white);
+                    border: solid 1px black;
+                    &:hover {
+                        color: @kolory[czerownyHover];
+                        border-color: @kolory[czerownyHover];
+                        background-image: linear-gradient(white,@kolory[color4] );
+                    }
+                    &:active {
+                        color: black;
+                        border-color: black;
+                    }
+                }
+            }
+            .stopka {
+                grid-row: ~"14";
+                grid-column: ~"2";
+                padding: 3px 10px 3px 10px;
+                margin-top: 20px;
+                background: lightgrey;
+                border-radius: 8px;
+                display: grid;
+                grid-template-columns: 120px auto 620px;
+                .lewa {
+                   grid-column: ~"1";
+                    text-align: left;
+                    p {
+                        font-size: 11px;
+                        font-weight: 500;
+                        text-decoration: none;
+                        margin: 0;
+                        color: @kolory[szaryText];
+                        #underlineNeeded:hover {
+                            text-decoration: underline;
+                        }
+                        a {
+                            font-size: 12px;
+                            font-weight: bold;
+                            text-decoration: none;
+                            color: @kolory[niebieskiLinki];
+                            &:hover {
+                                color: @kolory[czerownyHover];
+                            }
+                        }
+                    }
+                }
+                .prawa {
+                    grid-column: ~"3";
+                    text-align: right;
+                    p {
+                        font-size: 11px;
+                        font-weight: 500;
+                        text-decoration: none;
+                        margin: 7px 0 7px 7px;
+                        color: @kolory[szaryText];
+                        float: right;
+                        #underlineNeeded:hover {
+                            text-decoration: underline;
+                        }
+                        a {
+                            font-size: 12px;
+                            text-decoration: none;
+                            color: @kolory[niebieskiLinki];
+                            &:hover {
+                                color: @kolory[czerownyHover];
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// media
+@media (max-width: 1200px){
+    .body {
+        width: 98.5vw;
+        box-shadow: none;
+        .cieniowanie {
+            width: 98.5vw;
+            box-shadow: none;
+            .tresc {
+                width: 98.5vw;
+            }
+        }
+    }
+}
+//media
+@media (max-width: 1000px){
+    @maxWysokoscStrony: 2200px !important;
+    body {
+        background: white;
+    }
+    .tresc {
+        grid-template-rows: 94px 70px 40px 45px 220px 315px 315px 405px 220px 60px 60px 60px 60px 60px !important;
+    }
+    .linia {
+        height: @wysokoscLini + 10px !important;
+    }
+    .cell {
+        height: @wysokoscLini + 10px;
+    }
+}
+//media
+@media (max-width: 800px) {
+    body {
+        width: 97.5vw;
+    }
+    .body {
+        width: 97.5vw;
+        box-shadow: none;
+        .cieniowanie {
+            width: 97.5vw;
+            box-shadow: none;
+            .tresc {
+                width: 97.5vw;
+            }
+        }
+    }
+    .tresc {
+        grid-template-columns: auto !important;
+        grid-template-rows: 94px 70px 40px 25px 240px 345px 345px 445px 240px 70px 60px 60px 60px 60px !important;
+        .header {
+            grid-column: ~"1" !important;
+            grid-template-columns: auto 350px auto !important;
+            border-radius: 0px !important;
+            .logoINaglowek {
+                width: 350px;
+                grid-column: ~"2" !important;
+                .logo {
+                    display: none;
+                }
+            }
+            .pasekWyszukiwania {
+                display: none !important;
+            }
+        }
+        .nawigacja {
+            grid-column: ~"1" !important;
+            border-radius: 0px !important;
+        }
+        .link {
+            grid-column: ~"1" !important;
+            border-radius: 0px !important;
+        }
+        .dataDiv {
+            grid-column: ~"1" !important;
+        }
+        .forum {
+            grid-column: ~"1" !important;
+            border-radius: 0px !important;
+            .gora {
+                grid-template-columns: auto 110px auto !important;
+            }
+            .gora .cell{
+                display: none !important;
+            }
+            #col1 {
+                display: block !important;
+                grid-column: ~"2" !important;
+            }
+        }
+        #for1 {grid-column: ~"1" !important;}
+        #for2 {grid-column: ~"1" !important;}
+        #for3 {grid-column: ~"1" !important;}
+        #for4 {grid-column: ~"1" !important;}
+        #for5 {grid-column: ~"1" !important;}
+        .stopka {
+            grid-column: ~"1" !important;
+            border-radius: 0px !important;
+            grid-template-columns: 120px auto 200px !important;
+            .prawa p a {
+                display: none !important;
+            }
+        }
+    }
+    .linia {
+        height: @wysokoscLini + 20px !important;
+        grid-template-columns: 50px auto 86px 86px 212px !important;
+    }
+    .cell {
+        height: @wysokoscLini + 20px;
+    }
+}
+//koniec medii

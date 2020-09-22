@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Twitch</title>
+    <link rel="shortcut icon" type="image/png" href="twitch-icon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script> 
+</head>
+<body>
+    <div class="content"> 
+        <div class="header">
+            <div class="left">
+                <div class="logo">
+                    <a class="logoOdnosnik" href="#" target="_self">
+                        <svg height="50" width="50" x="0" y="0">
+                            <g>
+                                <polygon id="fiolet" points="8,15 15,8 41,8 41,26 29,39 23,39 17,45 17,39 8,39" style="fill: #9147ff"/>
+                                <path id="biel" d="M17 10 L38 10 L38 26 L33 31 L28 31 L22 36 L22 31 L17 31 L25 24 L35 24 L35 16 L25 16 L17 10 L17 31 L25 24 L25 16 L17 10 M28 16 L32 16 L32 24 L28 24" style="fill: white"/>
+                                <polygon id="wykrywacz" points="0,0 50,0 50,50, 0,50" style="fill:transparent"/>
+                            </g>
+                            <animate id="wykrywaczStart" restart="whenNotActive" dur="1ms" href="#wykrywacz" begin="mouseenter" />
+                            <animate id="wykrywaczEnd" restart="whenNotActive" dur="1ms" href="#wykrywacz" begin="mouseleave" />
+                            <animate id="fioletStart" href="#fiolet" restart="whenNotActive" dur="150ms" begin="wykrywaczStart.begin" fill="freeze" attributeName="points" values="8,15, 15,8, 41,8, 41,26, 29,39, 23,39, 17,45, 17,39, 8,39;8,15, 20,3, 46,3, 46,21, 29,39, 23,39, 17,45, 17,39, 8,39"/>
+                            <animate id="bielStart" href="#biel" restart="whenNotActive" dur="150ms" begin="wykrywaczStart.begin" fill="freeze" attributeName="d" values="M17 10 L38 10 L38 26 L33 31 L28 31 L22 36 L22 31 L17 31 L25 24 L35 24 L35 16 L25 16 L17 10 L17 31 L25 24 L25 16 L17 10 M28 16 L32 16 L32 24 L28 24;M22 5 L43 5 L43 21 L38 26 L33 26 L27 31 L27 26 L22 26 L30 19 L40 19 L40 11 L30 11 L22 5 L22 26 L30 19 L30 11 L22 5 M33 11 L37 11 L37 19 L33 19" />
+                            <animate id="fioletEnd" href="#fiolet" dur="250ms" begin="wykrywaczEnd.begin" fill="freeze" attributeName="points" values="8,15, 20,3, 46,3, 46,21, 29,39, 23,39, 17,45, 17,39, 8,39;8,15, 15,8, 41,8, 41,26, 29,39, 23,39, 17,45, 17,39, 8,39"/>
+                            <animate id="bielEnd" href="#biel" dur="250ms" begin="wykrywaczEnd.begin" fill="freeze" attributeName="d" values="M22 5 L43 5 L43 21 L38 26 L33 26 L27 31 L27 26 L22 26 L30 19 L40 19 L40 11 L30 11 L22 5 L22 26 L30 19 L30 11 L22 5 M33 11 L37 11 L37 19 L33 19;M17 10 L38 10 L38 26 L33 31 L28 31 L22 36 L22 31 L17 31 L25 24 L35 24 L35 16 L25 16 L17 10 L17 31 L25 24 L25 16 L17 10 M28 16 L32 16 L32 24 L28 24" />
+                            <animate id="mrug1" href="#biel" restart="whenNotActive" dur="75ms" begin="wykrywaczStart.begin + 150ms" fill="freeze" attributeName="d" values="M22 5 L43 5 L43 21 L38 26 L33 26 L27 31 L27 26 L22 26 L30 19 L40 19 L40 11 L30 11 L22 5 L22 26 L30 19 L30 11 L22 5 M33 11 L37 11 L37 19 L33 19;M22 5 L43 5 L43 21 L38 26 L33 26 L27 31 L27 26 L22 26 L30 19 L30 16.5 L40 16.5 L40 13.5 L30 13.5 L30 11 L22 5 L22 26 L30 19 L30 11 L22 5 M33 11 L37 11 L37 19 L33 19"/>
+                            <animate id="nieMrug1" href="#biel" restart="whenNotActive" dur="100ms" begin="mrug1.begin + 75ms" fill="freeze" attributeName="d" values="M22 5 L43 5 L43 21 L38 26 L33 26 L27 31 L27 26 L22 26 L30 19 L30 16.5 L40 16.5 L40 13.5 L30 13.5 L30 11 L22 5 L22 26 L30 19 L30 11 L22 5 M33 11 L37 11 L37 19 L33 19;M22 5 L43 5 L43 21 L38 26 L33 26 L27 31 L27 26 L22 26 L30 19 L40 19 L40 11 L30 11 L22 5 L22 26 L30 19 L30 11 L22 5 M33 11 L37 11 L37 19 L33 19"/>
+                            <animate id="mrug2" href="#biel" restart="whenNotActive" dur="75ms" begin="nieMrug1.begin + 100ms" fill="freeze" attributeName="d" values="M22 5 L43 5 L43 21 L38 26 L33 26 L27 31 L27 26 L22 26 L30 19 L40 19 L40 11 L30 11 L22 5 L22 26 L30 19 L30 11 L22 5 M33 11 L37 11 L37 19 L33 19;M22 5 L43 5 L43 21 L38 26 L33 26 L27 31 L27 26 L22 26 L30 19 L30 16.5 L40 16.5 L40 13.5 L30 13.5 L30 11 L22 5 L22 26 L30 19 L30 11 L22 5 M33 11 L37 11 L37 19 L33 19"/>
+                            <animate id="nieMrug2" href="#biel" restart="whenNotActive" dur="100ms" begin="mrug2.begin + 75ms" fill="freeze" attributeName="d" values="M22 5 L43 5 L43 21 L38 26 L33 26 L27 31 L27 26 L22 26 L30 19 L30 16.5 L40 16.5 L40 13.5 L30 13.5 L30 11 L22 5 L22 26 L30 19 L30 11 L22 5 M33 11 L37 11 L37 19 L33 19;M22 5 L43 5 L43 21 L38 26 L33 26 L27 31 L27 26 L22 26 L30 19 L40 19 L40 11 L30 11 L22 5 L22 26 L30 19 L30 11 L22 5 M33 11 L37 11 L37 19 L33 19"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="headerMenuButton" style="width: 62px;">
+                    <a href="#" target="_self" >
+                        <p style="color: #a970ff">Odkryj</p>
+                    </a>
+                    <div class="fioletowy-pasek"></div> 
+                </div>
+                <div class="headerMenuButton" style="width: 87px;"> 
+                    <a href="#" target="_self">   
+                        <p>Przeglądaj</p>  
+                    </a>
+                </div>
+                <div class="headerMenuButton" style="width: 140px;">
+                    <a href="#" target="_self">   
+                        <p>Wypróbuj Prime</p>  
+                    </a>
+                </div>
+                <div class="buttonDiv">
+                    <div class="posrednik1ButtonDiv">
+                        <div class="posrednik2ButtonDiv">
+                            <svg x="0" y="0" width="30" height="30">
+                                <g>
+                                    <circle cx="15" cy="15" r="2" style="fill:#efeff1"/>
+                                    <circle cx="22" cy="15" r="2" style="fill:#efeff1"/>
+                                    <circle cx="8" cy="15" r="2" style="fill:#efeff1"/>
+                                </g>
+                            </svg>
+                            <div id="d1" class="dymek">
+                                <span>Więcej</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="pasekWyszukiwania">
+                    <div class="pasekWyszukiwaniaSrodkowanie">
+                        <input class="input" type="text" name="wyszukiwanie" placeholder="Wyszukaj" autocapitalize="off" autocorrect="off" maxlength="150" spellcheck="off"/>
+                        <div class="znaczek-wyszukiwania">
+                            <svg x="0" y="0" width="38" height="38">
+                                <circle cx="19" cy="17" r="9" style="fill: #5a5a5c" />
+                                <circle cx="19" cy="17" r="6.5" style="fill: #29292c" />
+                                <polygon points="25,23 22,23 27,30 29,28 25,23" style="fill: #5a5a5c" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="buttonDiv" style="padding-left: 10px;">
+                    <div class="posrednik1ButtonDiv">
+                        <div class="posrednik2ButtonDiv">
+                            <svg x="0" y="0" width="30" height="30">
+                                <g>
+                                    <circle cx="15" cy="10" r="5.5" style="fill: #efeff1" />
+                                    <circle cx="15" cy="10" r="3.5" style="fill: #18181a" />
+                                    <rect x="14" y="15" width="2" height="2" style="fill: #efeff1" />
+                                    <rect x="14.5" y="17" width="6" height="2" style="fill: #efeff1" />
+                                    <rect x="8.5" y="17" width="6" height="2" style="fill: #efeff1" />
+                                    <rect x="8" y="17" width="2" height="5" style="fill: #efeff1" />
+                                    <rect x="19" y="17" width="2" height="5" style="fill: #efeff1" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonButton">
+                    <div class="buttonButtonSrodkowanie">
+                        <button type="button" id="rejestracja" class="buttonButtonElement">
+                            Zarejestruj się
+                        </button>
+                    </div>
+                </div>
+                <div class="buttonButton" style="width: 80px;">
+                    <div class="buttonButtonSrodkowanie" style="width: 80px;">
+                        <button type="button" id="logowanie" class="buttonButtonElement">
+                            Zaloguj się
+                        </button>
+                    </div>
+                </div>
+                <div class="buttonDiv">
+                    <div class="posrednik1ButtonDiv">
+                        <div class="posrednik2ButtonDiv">
+                            <svg x="0" y="0" width="30" height="30">
+                                <g>
+                                    <polygon points="7,20 7,9 11,14 15,9 19,14 23,9 23,20" style="fill: #efeff1;" />
+                                    <polygon points="8.5,18.5 8.5,14 11,16.5 15,11.5 19,16.5 21.5,14 21.5,18.5" style="fill: #18181a;" />
+                                </g>
+                            </svg>
+                            <div id="d2" class="dymek" style="width: 105px; right: -41px">
+                                <span style="font-size: 11px;">Nowe Łupy Prime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column-left">
+            <div class="znaczekH" id="znaczekH">
+                <div class="pivot">
+                <svg x="0" y="0" width="50" height="50">
+                    <rect x="20" y="22" width="11" height="12" style="fill: #efeff1"/>
+                    <rect x="21.5" y="23.5" width="8" height="9" style="fill: #202023"/>
+                    <polygon points="31,28 36,24 36,32 31,28" style="fill: #efeff1"/>
+                </svg>
+                <div id="d3" class="dymek">
+                    <span style="font-size: 11px;">Polecane kanały</span>
+                </div>
+                </div>
+            </div>
+            <div class="naglowek">
+                <div class="srodkowanieSpana">
+                    <span>POLECANE KANAŁY</span>
+                </div>
+                <div class="buttonDiv" style="height: 40px;">
+                    <div class="posrednik1ButtonDiv">
+                        <div class="posrednik2ButtonDiv">
+                            <svg x="0" y="0" width="30" height="30">
+                                <g>
+                                    <rect x="21" y="8" width="2" height="14" style="fill: #efeff1" />
+                                    <polygon points="19,14 19,16 11,16 14,19 13,21 8,15 13,9 14,11 11,14" style="fill: #efeff1" />
+                                </g>
+                            </svg>
+                            <div id="d4" class="dymek" style="width: 40px; top: 7px; left: 50px;">
+                                <span style="font-size: 11px;">Zwiń</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="zdj-profilowe1.png"/>
+                <div class="imieIGra">
+                    <span class="imie">SovietWomble</span>
+                    <span class="gra">Halo</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        <svg x="0" y="0" width="10" height="10">
+                            <circle cx="5" cy="5" r="5" style="fill: red" />
+                        </svg>
+                        2213
+                    </span>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="zdj-profilowe2.png"/>
+                <div class="imieIGra">
+                    <span class="imie">SR_Kaif</span>
+                    <span class="gra">Among Us</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        <svg x="0" y="0" width="10" height="10">
+                            <circle cx="5" cy="5" r="5" style="fill: red" />
+                        </svg>
+                        1669
+                    </span>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="zdj-profilowe3.png"/>
+                <div class="imieIGra">
+                    <span class="imie">DigbyWarter</span>
+                    <span class="gra">Arma 3</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        <svg x="0" y="0" width="10" height="10">
+                            <circle cx="5" cy="5" r="5" style="fill: red" />
+                        </svg>
+                        190
+                    </span>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="zdj-profilowe4.png"/>
+                <div class="imieIGra">
+                    <span class="imie">pokimane</span>
+                    <span class="gra">Counter-Strike</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        <svg x="0" y="0" width="10" height="10">
+                            <circle cx="5" cy="5" r="5" style="fill: red" />
+                        </svg>
+                        13 292
+                    </span>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="zdj-profilowe5.png"/>
+                <div class="imieIGra">
+                    <span class="imie">PAX2</span>
+                    <span class="gra">Special Events</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        <svg x="0" y="0" width="10" height="10">
+                            <circle cx="5" cy="5" r="5" style="fill: red" />
+                        </svg>
+                        274
+                    </span>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="zdj-profilowe6.png"/>
+                <div class="imieIGra">
+                    <span class="imie">Edberg</span>
+                    <span class="gra">Halo</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        <svg x="0" y="0" width="10" height="10">
+                            <circle cx="5" cy="5" r="5" style="fill: red" />
+                        </svg>
+                        241
+                    </span>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="zdj-profilowe7.png"/>
+                <div class="imieIGra">
+                    <span class="imie">PhlyDaily</span>
+                    <span class="gra">War Thunder</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        <svg x="0" y="0" width="10" height="10">
+                            <circle cx="5" cy="5" r="5" style="fill: red" />
+                        </svg>
+                        1141
+                    </span>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="zdj-profilowe8.png"/>
+                <div class="imieIGra">
+                    <span class="imie">RocketLeague</span>
+                    <span class="gra">Rocket League</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        <svg x="0" y="0" width="10" height="10">
+                            <circle cx="5" cy="5" r="5" style="fill: red" />
+                        </svg>
+                        36 494
+                    </span>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="zdj-profilowe9.png"/>
+                <div class="imieIGra">
+                    <span class="imie">DrDisrespect</span>
+                    <span class="gra">Overwatch</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        <svg x="0" y="0" width="10" height="10">
+                            <circle cx="5" cy="5" r="5" style="fill: red" />
+                        </svg>
+                        19664
+                    </span>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="zdj-profilowe10.png"/>
+                <div class="imieIGra">
+                    <span class="imie">Warframe</span>
+                    <span class="gra">Warframe</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        <svg x="0" y="0" width="10" height="10">
+                            <circle cx="5" cy="5" r="5" style="fill: red" />
+                        </svg>
+                        46 033
+                    </span>
+                </div>
+            </div>
+            <div class="banner">
+                <p class="duzyText">
+                    Dołącz do społeczności
+                    <span>Twitcha</span>!
+                </p>
+                <p class="malyText">
+                    Oskryj najlepsze transmisje na żywo w dowolnym miejscu.
+                </p>
+                <div class="buttonButton" style="padding: 0px;">
+                    <div class="buttonButtonSrodkowanie">
+                        <button type="button" id="rejestracja" class="buttonButtonElement">
+                            Zarejestruj się
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column-right">
+            <div class="karuzela">
+				<div class="buttonDiv" style="width: 36px;height: 36px;margin-left: 10px;">
+                    <div class="posrednik1ButtonDiv" style="width: 36px;height: 36px;">
+                        <div class="posrednik2ButtonDiv" style="width: 36px;height: 36px;">
+                            <svg x="0" y="0" width="36" height="36">
+                                <g>
+                                    <polygon points="12,18 18,10 20,12 15,18 20,24 18,26" style="fill: #efeff1" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="tlo1" style="left: 50%">
+                    <div class="zaslona1"style="left: 0px"></div>
+                    <image class="tlo1" alt="nie działa" src="karuzela1.jpg" style="left: 0px;"></image>
+                </div>
+                <div class="tlo2" style="left: 60%">
+                    <div class="zaslona2"style="left: 0px"></div>
+                    <image class="tlo2" alt="nie działa" src="karuzela2.jpg" style="left: 0px;"></image>
+                </div>
+                <div style="display: none; position: relative; margin: 0 auto;"></div>
+				<div class="wideoGlowne">
+                    <div class="wideo">
+                        <video controls>
+                            <source src="wideo.mp4" type="video/mp4">
+                        </video>
+                        <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                    </div>
+                    <div class="infoWideo">
+                        <div class="infoPadding">
+                            <div class="zaslona"></div>
+                            <div class="infoAutor">
+                                <div style="width: 50px;height: 50px;">
+                                    <a class="image" href="#" target="_self" style="width: 50px;height: 50px;margin: 0;display: inline-block">
+                                        <image class="image" alt="profilowe1" src="zdj-profilowe-karuzela.jpg" style="width: 50px;height: 50px;margin: 0;"/>
+                                    </a>
+                                </div>
+                                <div class="pozostaleInfo">
+                                    <div>
+                                        <a id="underlineChange" class="imie2" href="#" target="_self" style="color: #a970ff;font-size: 13px;font-weight: bold;">Andyraecosplay</a>
+                                    </div>
+                                    <div>
+                                        <a id="underlineChange" class="gra" href="#" target="_self" style="font-size: 12px;font-weight: small; color: #a970ff">Rozmowy</a>
+                                    </div>
+                                    <div>
+                                        <span class="ileWidzow">2432 widzów</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kategorie">
+                                <div class="przedKategoria">
+                                    <a class="kategoria" href="#" target="_self">
+                                        Angielski
+                                    </a>
+                                </div>
+                                <div class="przedKategoria">
+                                    <a class="kategoria" href="#" target="_self" style="width: 60px;">
+                                        Cosplay
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="scianaTekstu">
+                                <p>
+                                    Hiya all!!!! I'm Andy and I am just a small town girl from British Columbia Canada!! I am first and foremost a cosplayer and it is seriously my greatest passion in the world!!! I am a Creative streamer and my channel focuses on easy to follow cosplay tutorials and cosplay transformations so that anyone can start making costumes!!! Whether you have been making costumes for years or you are just starting out, my community is a fun place to hangout, make friends and learn some new tips!!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tlo1">
+                    <div class="zaslona1"></div>
+                    <image class="tlo1" alt="nie działa" src="karuzela3.jpg" ></image>
+                </div>
+                <div class="tlo2">
+                    <div class="zaslona2"></div>
+                    <image class="tlo2" alt="nie działa" src="karuzela4.jpg"></image>
+                </div>
+				<div class="buttonDiv" style="width: 36px;height: 36px;margin-right: 10px;">
+                    <div class="posrednik1ButtonDiv" style="width: 36px;height: 36px;">
+                        <div class="posrednik2ButtonDiv" style="width: 36px;height: 36px;">
+                            <svg x="0" y="0" width="36" height="36">
+                                <g>
+                                    <polygon points="24,18 18,10 16,12 21,18 16,24 18,26" style="fill: #efeff1" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contentWlasciwy">
+                <div class="polecane">
+                    <div class="container">
+                        <div class="tytul">Polecane kanały na żywo</div>
+                        <div class="elementy">
+                            <div class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="nie działa" src="obrazek-z-wideo1.jpg"></image>
+                                        <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                                        <div class="iloscWidzow"><span>43 216 widzów</span></div>
+                                    </a>
+                                </div>
+                                <div class="opis">
+                                    <div class="ukladIkona">
+                                        <a class="image" href="#" target="_self" style="width: 40px;height: 40px;margin: 0;display: inline-block">
+                                            <image class="image" alt="profilowe1" src="zdj-profilowe-polecane1.png" style="width: 40px;height: 40px;margin: 0;"/>
+                                        </a>
+                                    </div>
+                                    <div class="resztaOpisu">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">warzone 3's. obviously. [@summit1g]</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="imie2" href="#" target="_self">summit1g</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">Call of Duty: Modern Warfare</a>
+                                        </div>
+                                        <div class="kategorie">
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self">
+                                                    Angielski
+                                                </a>
+                                            </div>
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self" style="width: 90px;">
+                                                    Squad Stream
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="nie działa" src="obrazek-z-wideo2.jpg"></image>
+                                        <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                                        <div class="iloscWidzow" style="width: 80px"><span>7964 widzów</span></div>
+                                    </a>
+                                </div>
+                                <div class="opis">
+                                    <div class="ukladIkona">
+                                        <a class="image" href="#" target="_self" style="width: 40px;height: 40px;margin: 0;display: inline-block">
+                                            <image class="image" alt="profilowe1" src="zdj-profilowe-polecane2.png" style="width: 40px;height: 40px;margin: 0;"/>
+                                        </a>
+                                    </div>
+                                    <div class="resztaOpisu">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">LNC with games and other things :D</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="imie2" href="#" target="_self">Cryaotic</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">Witch It</a>
+                                        </div>
+                                        <div class="kategorie">
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self">
+                                                    Angielski
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elh1" class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="nie działa" src="obrazek-z-wideo3.jpg"></image>
+                                        <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                                        <div class="iloscWidzow" style="width: 80px"><span>3138 widzów</span></div>
+                                    </a>      
+                                </div>
+                                <div class="opis">
+                                    <div class="ukladIkona">
+                                        <a class="image" href="#" target="_self" style="width: 40px;height: 40px;margin: 0;display: inline-block">
+                                            <image class="image" alt="profilowe1" src="zdj-profilowe-polecane3.png" style="width: 40px;height: 40px;margin: 0;"/>
+                                        </a>
+                                    </div>
+                                    <div class="resztaOpisu">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Random VR Stuff</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="imie2" href="#" target="_self">Vinesauce</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">Virtual Reality Studio</a>
+                                        </div>
+                                        <div class="kategorie">
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self">
+                                                    Angielski
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elh6" class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="nie działa" src="obrazek-z-wideo4.jpg"></image>
+                                        <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                                        <div class="iloscWidzow" style="width: 70px"><span>545 widzów</span></div>
+                                    </a>
+                                </div>
+                                <div class="opis">
+                                    <div class="ukladIkona">
+                                        <a class="image" href="#" target="_self" style="width: 40px;height: 40px;margin: 0;display: inline-block">
+                                            <image class="image" alt="profilowe1" src="zdj-profilowe-polecane4.png" style="width: 40px;height: 40px;margin: 0;"/>
+                                        </a>
+                                    </div>
+                                    <div class="resztaOpisu">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">YogsCinema - Minecraft - A NEW BU...</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="imie2" href="#" target="_self">Yogscast</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">Minecraft</a>
+                                        </div>
+                                        <div class="kategorie">
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self">
+                                                    Angielski
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elH1" class="elementH">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="nie działa" src="obrazek-z-wideo2.jpg"></image>
+                                        <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                                        <div class="iloscWidzow" style="width: 80px"><span>7964 widzów</span></div>
+                                    </a>
+                                </div>
+                                <div class="opis">
+                                    <div class="ukladIkona">
+                                        <a class="image" href="#" target="_self" style="width: 40px;height: 40px;margin: 0;display: inline-block">
+                                            <image class="image" alt="profilowe1" src="zdj-profilowe-polecane2.png" style="width: 40px;height: 40px;margin: 0;"/>
+                                        </a>
+                                    </div>
+                                    <div class="resztaOpisu">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">LNC with games and other things :D</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="imie2" href="#" target="_self">Cryaotic</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">Witch It</a>
+                                        </div>
+                                        <div class="kategorie">
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self">
+                                                    Angielski
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elH2" class="elementH">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="nie działa" src="obrazek-z-wideo2.jpg"></image>
+                                        <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                                        <div class="iloscWidzow" style="width: 80px"><span>7964 widzów</span></div>
+                                    </a>
+                                </div>
+                                <div class="opis">
+                                    <div class="ukladIkona">
+                                        <a class="image" href="#" target="_self" style="width: 40px;height: 40px;margin: 0;display: inline-block">
+                                            <image class="image" alt="profilowe1" src="zdj-profilowe-polecane2.png" style="width: 40px;height: 40px;margin: 0;"/>
+                                        </a>
+                                    </div>
+                                    <div class="resztaOpisu">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">LNC with games and other things :D</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="imie2" href="#" target="_self">Cryaotic</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">Witch It</a>
+                                        </div>
+                                        <div class="kategorie">
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self">
+                                                    Angielski
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elH3" class="elementH">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="nie działa" src="obrazek-z-wideo2.jpg"></image>
+                                        <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                                        <div class="iloscWidzow" style="width: 80px"><span>7964 widzów</span></div>
+                                    </a>
+                                </div>
+                                <div class="opis">
+                                    <div class="ukladIkona">
+                                        <a class="image" href="#" target="_self" style="width: 40px;height: 40px;margin: 0;display: inline-block">
+                                            <image class="image" alt="profilowe1" src="zdj-profilowe-polecane2.png" style="width: 40px;height: 40px;margin: 0;"/>
+                                        </a>
+                                    </div>
+                                    <div class="resztaOpisu">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">LNC with games and other things :D</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="imie2" href="#" target="_self">Cryaotic</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">Witch It</a>
+                                        </div>
+                                        <div class="kategorie">
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self">
+                                                    Angielski
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zawijaneCos">
+                            <div class="pasekContainer">
+                                <div class="pasek"></div>
+                            </div>
+                            <div class="showMore">
+                                <button type="button" class="buttonShowMore">
+                                    <div class="zawartoscShowMore">
+                                        <span>Pokaż więcej</span>
+                                        <svg width="20px" height="20px">
+                                            <polygon points="10,15 3,7 6,7 10,12 14,7 17,7" style="fill: #a970ff"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="pasekContainer">
+                                <div class="pasek"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="polecane" style="height: 350px;">
+                    <div class="container" style="height: 330px;">
+                        <div class="tytul">Polecane <a href="#" target="_self">kategorie</a></div>
+                        <div class="elementy" style="height: 270px;">
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="polecane-kat1.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis" style="width: 145px;height: 96px;flex-direction: column;">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Call of Duty: Modern...</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="imie2" href="#" target="_self">309 912 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 40px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 40px;">
+                                                FPS
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria" style="width: 75px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 75px;">
+                                                Strzelanka
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="polecane-kat2.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Fortnite</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="imie2" href="#" target="_self">106 585 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 75px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 75px;">
+                                                Strzelanka
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elh2" class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="polecane-kat3.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Rozmowy</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="imie2" href="#" target="_self">279 154 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 40px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 40px;">
+                                                IRL
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="polecane-kat4.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Apex Legends</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="imie2" href="#" target="_self">31 925 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 40px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 40px;">
+                                                FPS
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria" style="width: 75px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 75px;">
+                                                Strzelanka
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="polecane-kat5.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">FIFA 20</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="imie2" href="#" target="_self">45 216 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 70px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 70px;">
+                                                Sportowa
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="polecane-kat6.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">League of Legends</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="imie2" href="#" target="_self">176 091 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 55px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 55px;">
+                                                MOBA
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="polecane-kat7.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Minecraft</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="imie2" href="#" target="_self">27 198 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 105px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 105px;">
+                                                Gra przygodowa
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elh5" class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="polecane-kat8.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Grand Theft Auto V</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="imie2" href="#" target="_self">81 823 widzów</a>
+                                    </div>
+                                    <div class="kategorie"></div>
+                                </div>
+                            </div>
+                            <div id="elH6" class="elementH" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="polecane-kat1.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis" style="width: 145px;height: 96px;flex-direction: column;">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Call of Duty: Modern...</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="imie2" href="#" target="_self">309 912 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 40px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 40px;">
+                                                FPS
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria" style="width: 75px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 75px;">
+                                                Strzelanka
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elH5" class="elementH" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="polecane-kat1.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis" style="width: 145px;height: 96px;flex-direction: column;">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Call of Duty: Modern...</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="imie2" href="#" target="_self">309 912 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 40px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 40px;">
+                                                FPS
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria" style="width: 75px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 75px;">
+                                                Strzelanka
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elH4" class="elementH" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="polecane-kat1.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis" style="width: 145px;height: 96px;flex-direction: column;">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Call of Duty: Modern...</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="imie2" href="#" target="_self">309 912 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 40px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 40px;">
+                                                FPS
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria" style="width: 75px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 75px;">
+                                                Strzelanka
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elH11" class="elementH" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="polecane-kat1.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis" style="width: 145px;height: 96px;flex-direction: column;">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Call of Duty: Modern...</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="imie2" href="#" target="_self">309 912 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 40px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 40px;">
+                                                FPS
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria" style="width: 75px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 75px;">
+                                                Strzelanka
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elH10" class="elementH" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="polecane-kat1.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis" style="width: 145px;height: 96px;flex-direction: column;">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Call of Duty: Modern...</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="imie2" href="#" target="_self">309 912 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 40px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 40px;">
+                                                FPS
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria" style="width: 75px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 75px;">
+                                                Strzelanka
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pasekContainer" style="width: 100%;">
+                            <div class="pasek"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="polecane">
+                    <div class="container">
+                        <div class="tytul">Polecana muzyka</div>
+                        <div class="elementy">
+                            <div class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="zdj-muzyka1.jpg"></image>
+                                    </a>
+                                </div>
+                                <div class="opis" style="margin: 0;height: 95px;flex-direction: column;">
+                                    <div class="audio">
+                                        <audio controls>
+                                            <source src="muzyka1.mp3" type="audio/mpeg"/>
+                                            Muzyka się nie wyświetla
+                                        </audio>
+                                    </div>
+                                    <div class="resztaOpisu" style="width: 293px;height: 32px;">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Level</a>
+                                        </div>
+                                        <div class="ukladImie">
+                                            <a id="colorChange" class="imie2" href="#" target="_self">Black Pistol Fire</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elh4" class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="zdj-muzyka2.jpg"></image>
+                                    </a>
+                                </div>
+                                <div class="opis" style="margin: 0;height: 95px;flex-direction: column;">
+                                    <div class="audio">
+                                        <audio controls>
+                                            <source src="muzyka2.mp3" type="audio/mpeg"/>
+                                            Muzyka się nie wyświetla
+                                        </audio>
+                                    </div>
+                                    <div class="resztaOpisu" style="width: 293px;height: 32px;">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Choke</a>
+                                        </div>
+                                        <div class="ukladImie">
+                                            <a id="colorChange" class="imie2" href="#" target="_self">I DONT KNOW HOW BUT THEY FOUND ME</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elh3" class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="zdj-muzyka3.jpg"></image>
+                                    </a>
+                                </div>
+                                <div class="opis" style="margin: 0;height: 95px;flex-direction: column;">
+                                    <div class="audio">
+                                        <audio controls>
+                                            <source src="muzyka3.mp3" type="audio/mpeg"/>
+                                            Muzyka się nie wyświetla
+                                        </audio>
+                                    </div>
+                                    <div class="resztaOpisu" style="width: 293px;height: 32px;">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Pick Your Poison</a>
+                                        </div>
+                                        <div class="ukladImie">
+                                            <a id="colorChange" class="imie2" href="#" target="_self">Black Pistol Fire</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="zdj-muzyka4.jpg"></image>
+                                    </a>
+                                </div>
+                                <div class="opis" style="margin: 0;height: 95px;flex-direction: column;">
+                                    <div class="audio">
+                                        <audio controls>
+                                            <source src="muzyka4.mp3" type="audio/mpeg"/>
+                                            Muzyka się nie wyświetla
+                                        </audio>
+                                    </div>
+                                    <div class="resztaOpisu" style="width: 293px;height: 32px;">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Sinners</a>
+                                        </div>
+                                        <div class="ukladImie">
+                                            <a id="colorChange" class="imie2" href="#" target="_self">Barns Courtney</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elH7" class="elementH">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="zdj-muzyka1.jpg"></image>
+                                    </a>
+                                </div>
+                                <div class="opis" style="margin: 0;height: 95px;flex-direction: column;">
+                                    <div class="audio">
+                                        <audio controls>
+                                            <source src="muzyka1.mp3" type="audio/mpeg"/>
+                                            Muzyka się nie wyświetla
+                                        </audio>
+                                    </div>
+                                    <div class="resztaOpisu" style="width: 293px;height: 32px;">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Level</a>
+                                        </div>
+                                        <div class="ukladImie">
+                                            <a id="colorChange" class="imie2" href="#" target="_self">Black Pistol Fire</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elH8" class="elementH">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="zdj-muzyka1.jpg"></image>
+                                    </a>
+                                </div>
+                                <div class="opis" style="margin: 0;height: 95px;flex-direction: column;">
+                                    <div class="audio">
+                                        <audio controls>
+                                            <source src="muzyka1.mp3" type="audio/mpeg"/>
+                                            Muzyka się nie wyświetla
+                                        </audio>
+                                    </div>
+                                    <div class="resztaOpisu" style="width: 293px;height: 32px;">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Level</a>
+                                        </div>
+                                        <div class="ukladImie">
+                                            <a id="colorChange" class="imie2" href="#" target="_self">Black Pistol Fire</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="elH9" class="elementH">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdjPolecane" alt="cos nie pyklo" src="zdj-muzyka1.jpg"></image>
+                                    </a>
+                                </div>
+                                <div class="opis" style="margin: 0;height: 95px;flex-direction: column;">
+                                    <div class="audio">
+                                        <audio controls>
+                                            <source src="muzyka1.mp3" type="audio/mpeg"/>
+                                            Muzyka się nie wyświetla
+                                        </audio>
+                                    </div>
+                                    <div class="resztaOpisu" style="width: 293px;height: 32px;">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Level</a>
+                                        </div>
+                                        <div class="ukladImie">
+                                            <a id="colorChange" class="imie2" href="#" target="_self">Black Pistol Fire</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zawijaneCos">
+                            <div class="pasekContainer">
+                                <div class="pasek"></div>
+                            </div>
+                            <div class="showMore">
+                                <button type="button" class="buttonShowMore">
+                                    <div class="zawartoscShowMore">
+                                        <span>Pokaż więcej</span>
+                                        <svg width="20px" height="20px">
+                                            <polygon points="10,15 3,7 6,7 10,12 14,7 17,7" style="fill: #a970ff"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="pasekContainer">
+                                <div class="pasek"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+@mixin flex-row() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+%znaczek {
+    width: 25px;
+    height: 25px;
+    margin: 7px;
+}

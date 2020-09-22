@@ -1,0 +1,449 @@
+//Przycisk div z dymkiem lub bez ====================================
+.button-div {
+    width: 40px;
+    height: 50px;
+    position: relative;
+    .posrednik1ButtonDiv {
+        width: 30px;
+        height: 30px;
+        position: absolute; 
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .posrednik2ButtonDiv {
+        width: 30px;
+        height: 30px;
+        border-radius: 15%;
+    }
+    .dymek {
+        width: 50px; 
+        height: 20px; 
+        background: white; 
+        border-radius: 6px; 
+        position: absolute; 
+        text-align: center;
+        visibility: hidden;
+        display: inline-block;
+        top: 37px; 
+        right: -10px;
+        span {
+            color: black;
+            padding: 2px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+    }
+    .posrednik1ButtonDiv:hover .dymek {visibility: visible;}
+    .posrednik2ButtonDiv:hover {background: #3a3a42;cursor: pointer;}
+}
+//Przycisk div z dymkiem ==================================== Koniec
+
+//Przycisk button ===========================================
+.button-button {
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    padding-left: 10px;
+    .buttonButtonSrodkowanie {
+        width: 100px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 6px;
+        .buttonButtonElement {
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            outline: none;
+            border: none;
+            color: #efeff1;
+            font-size: 0.7em;
+            font-weight: bold;
+        }
+    }
+    #logowanie {background: #424243;}
+    #logowanie:hover {background: #4d4d4d;}
+    #rejestracja {background: #9147ff;}
+    #rejestracja:hover {background: #772ee6;}
+}
+//Przycisk button =========================================== Koniec
+
+//Przycisk w menu w headerze [odkryj|przeglądaj|odkryj prime]
+.header-menu-button { 
+    height: 50px;
+    width: 100px;
+    z-index: 999;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    a {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        display: inline-block;
+        p {
+            color: #efeff1;
+            font-size: 18px;
+            margin: 0;
+            padding-top: 14px;
+        }
+        &:hover p {color: #a970ff;}
+    }
+    
+}
+//Przycisk w menu w headerze [odkryj|przeglądaj|odkryj prime] Koniec
+
+//Okrągłe kółko na zdj profilowe ============================
+.image- {
+    width: 30px;
+    height: 30px;
+    border-radius: 90%;
+    margin: 5px 5px 5px 10px;
+}
+//Okrągłe kółko na zdj profilowe ============================ Koniec
+
+//Polecane kanały w lewej kolumnie ==========================
+.polecany-kanal {
+    height: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    //.image {
+    //    .image-();
+    //}
+    .imieIGra {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-left: 10px;
+        width: 120px;
+        .imie {
+            color: #dedee3;
+            font-size: 16px;
+            font-weight: 550;
+        }
+        .gra {
+            .gra-();
+        }
+    }
+    .ogladajacy {
+        height: 40px;
+        width: 85px;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: start;
+        span {
+            padding-right: 10px;
+            text-align: end;
+            color: #efeff1;
+            font-size: 16px;
+        }
+    }
+    &:hover {background: #27262C;cursor: pointer;}
+}
+//Polecane kanały w lewej kolumnie ========================== Koniec
+
+//Baner na ktorym jest napisane "na żywo" ===================
+.baner-na-zywo {
+    width: 66px;
+    height: 18px;
+    background: #e91916;
+    border-radius: 5px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 8px 0px 0px 5px;
+    text-align: center;
+    span {
+        color: #efeff1;
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+//Baner na ktorym jest napisane "na żywo" =================== Koniec
+
+//po prostu często używany tekst ============================
+.gra- {
+    color: #adadb8;
+    font-size: 14px;
+    text-decoration: none;
+}
+//po prostu często używany tekst ============================ Koniec
+
+//po prostu często używany tekst ============================
+.imie2- {
+    color: #adadb8;
+    font-size: 14px;
+    text-decoration: none;
+}
+//po prostu często używany tekst ============================ Koniec
+
+//po prostu często używany tekst ============================
+.tytul- {
+    height: 30px;
+    color: #efeff1;
+    font-size: large;
+    font-weight: 700;
+    a {text-decoration: none;color: #a970ff;}
+    a:hover {text-decoration: underline;}
+}
+//po prostu często używany tekst ============================ Koniec
+
+//Ten małe szare elipsy zawierające w sobie kategorie =======
+.kategorie- {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    margin: 5px 0 0 0;
+    .przedKategoria {
+        height: 14px;
+        width: 65px;
+        margin: 0 6px 0 0;
+        text-align: center;
+        .kategoria {
+            display: inline-block;
+            background: #323232;
+            height: 14px;
+            border-radius: 10px;
+            text-decoration: none;
+            width: 65px;
+            color: #b2b2b2;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 2px 0 2px 0;
+            &:hover {
+                background: #424242;
+            }
+            &:active {
+                box-shadow: 0px 0px 0px 2px #a970ff inset;
+            }
+        }
+    }
+}
+//Ten małe szare elipsy zawierające w sobie kategorie ======= Koniec
+
+//Baner na ktorym jest ilość widzów =========================
+.ilosc-widzow {
+    width: 90px;
+    height: 18px;
+    background: #18171C;
+    opacity: 0.8;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin: 0px 0px 8px 5px;
+    text-align: center;
+    span {
+        color: white;
+        font-size: 12px;
+        font-weight: medium;
+        opacity: 1;
+    }
+}
+//Baner na ktorym jest ilość widzów ========================= Koniec
+
+//Elementy polecane w contencie właściwym ===================
+.polecane- {
+    height: 340px;
+    .container {
+        height: 320px;
+        padding: 0 20px 20px 20px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        .elementy {
+            height: 260px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            .element {
+                padding: 0 8px 0 0;
+                height: 260px;
+                width: 297px;
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .img {
+                        width: 293px;
+                        height: 165px;
+                    .elementOdnosnik {
+                        width: 293px;
+                        height: 165px;
+                        display: inline-block;
+                        position: relative;
+                        .zdjPolecane {
+                            width: 293px;
+                            height: 165px;
+                        }
+                        &:hover {
+                            animation-name: przesuniecie;
+                            animation-duration: 150ms;
+                            animation-fill-mode: both;
+                        }
+                        &:not(:hover) {
+                            animation-name: powrot;
+                            animation-duration: 150ms;
+                            animation-fill-mode: both;
+                        }
+                    }
+                }
+                
+                .opis {                             
+                    width: 293px;
+                    height: 87px;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    flex-direction: row;
+                    justify-content: start;
+                    align-items: start;
+                    margin: 8px 0 0 0;
+                    .ukladIkona {
+                        width: 40px;
+                        height: 87px;
+                        margin: 0 10px 0 0;
+                    }
+                    .resztaOpisu {
+                        width: 253px;
+                        height: 87px;
+                    }
+                }
+            }
+            .elementH {
+                padding: 0 8px 0 0;
+                height: 260px;
+                width: 297px;
+                display: none;      
+                .img {
+                        width: 293px;
+                        height: 165px;
+                    .elementOdnosnik {
+                        width: 293px;
+                        height: 165px;
+                        display: inline-block;
+                        position: relative;
+                        .zdjPolecane {
+                            width: 293px;
+                            height: 165px;
+                        }
+                        &:hover {
+                            animation-name: przesuniecie;
+                            animation-duration: 150ms;
+                            animation-fill-mode: both;
+                        }
+                        &:not(:hover) {
+                            animation-name: powrot;
+                            animation-duration: 150ms;
+                            animation-fill-mode: both;
+                        }
+                    }
+                }
+                .opis {                             
+                    width: 293px;
+                    height: 87px;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    flex-direction: row;
+                    justify-content: start;
+                    align-items: start;
+                    margin: 8px 0 0 0;
+                    .ukladIkona {
+                        width: 40px;
+                        height: 87px;
+                        margin: 0 10px 0 0;
+                    }
+                    .resztaOpisu {
+                        width: 253px;
+                        height: 87px;
+                    }
+                }
+            }
+        }
+        .zawijaneCos {
+            height: 30px;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            .pasekContainer {
+                height: 30px;
+                width: 50%;
+                position: relative;
+                .pasek {
+                    height: 1px;
+                    width: 100%;
+                    background: #393939;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .showMore {
+                height: 30px;
+                width: 117px;
+                padding: 0 10px 0 10px;
+                .buttonShowMore {
+                    height: 30px;
+                    width: 117px;
+                    padding: 0px;
+                    border: 0px;
+                    outline: none;
+                    background: none;
+                    border-radius: 4px;
+                    &:hover {
+                        background: #3a3a42;
+                    }
+                    .zawartoscShowMore {
+                        height: 20px;
+                        width: 97px;
+                        padding: 0 10px 0 10px;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        span {
+                            font-size: 11px;
+                            padding-right: 5px;
+                            color: #a970ff;
+                            font-weight: bold;
+                        }
+                    }
+                    
+                }
+                
+            }
+        }
+    }
+}
+//Elementy polecane w contencie właściwym =================== Koniec
+
+//Flex direction row ========================================
+.flex-row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+//Flex direction row ======================================== Koniec
+
+//Flex direction column =====================================
+.flex-column {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+//Flex direction column ===================================== Koniec

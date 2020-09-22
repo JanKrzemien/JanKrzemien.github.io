@@ -1,0 +1,731 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polskie forum wsparcia dla phpBB - Wykaz forów</title>
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+</head>
+<body>
+    <div class="body">
+        <div class="cieniowanie">
+            <div class="tresc">
+                <div class="header">
+                    <div class="logoINaglowek">
+                        <div class="logo">
+                            <a class="logoOdnosnik" href="#" target="_self">
+                                <image class="logoImg" alt="logo" src="logo.png"/>
+                            </a>
+                        </div>
+                        <div class="naglowek">
+                            <h1>Polskie forum wsparcia dla phpBB</h1> 
+                        </div>
+                    </div>
+                    <div class="pasekWyszukiwania">
+                        <div class="wyszukiwanie">
+                            <input type="text" placeholder="Szukaj..."/>
+                            <div class="lupa">
+                                <svg x="0" y="0" width="28" height="24">
+                                    <circle id="lupa1" cx="13" cy="11" r="6" style="fill: #8f8f8f" />
+                                    <circle cx="13" cy="11" r="4" style="fill: #ececec" />
+                                    <polygon id="lupa2" points="17,15 14,15 19,22 21,20 17,15" style="fill: #8f8f8f" />
+                                    <polygon id="wykrywacz" points="0,0 28,0 28,24 0,24 0,0" style="fill: transparent"/>
+                                        <animate id="wykrywaczStart" restart="whenNotActive" dur="1ms" href="#wykrywacz" begin="mouseenter" />
+                                        <animate id="wykrywaczEnd" restart="whenNotActive" dur="1ms" href="#wykrywacz" begin="mouseleave" />
+                                        <animate id="kolorowanko1Start" href="#lupa1" restart="whenNotActive" dur="1ms" begin="wykrywaczStart.begin" fill="freeze" attributeName="fill" from="#8f8f8f" to="#105289"/>
+                                        <animate id="kolorowanko2Start" href="#lupa2" restart="whenNotActive" dur="1ms" begin="wykrywaczStart.begin" fill="freeze" attributeName="fill" from="#8f8f8f" to="#105289"/>
+                                        <animate id="kolorowanko1End" href="#lupa1" dur="1ms" begin="wykrywaczEnd.begin" fill="freeze" attributeName="fill" from="#105289" to="#8f8f8f"/>
+                                        <animate id="kolorowanko2End" href="#lupa2" dur="1ms" begin="wykrywaczEnd.begin" fill="freeze" attributeName="fill" from="#105289" to="#8f8f8f"/>
+                                </svg>
+                            </div>
+                            <div class="opcje"><p>&#9881;</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nawigacja">
+                    <div class="lewaUpNaw">
+                        <a href="#" target="_self"><b>&#9776;</b> <span>Więcej...</span></a>
+                        <a href="#" target="_self"><b>&#63;</b> <u>FAQ</u></a>
+                    </div>
+                    <div class="prawaUpNaw">
+                        <a href="#" target="_self"><b>&#x23FB;</b> <span>Zaloguj się</span></a>
+                        <a href="#" target="_self"><span style="text-decoration: none">&#10000;</span> <span>Zarejestruj się</span></a>
+                    </div>
+                    <div class="pasek"></div>
+                    <div class="lewaDownNaw">
+                        <a href="#" target="_self"><b>&#127968; <span>Strona główna</span></b></a>
+                    </div>
+                </div>
+                <div class="link">
+                    <a href="#" target="_self">Polski pakiet językowy dla phpBB 3.2.4</a>
+                </div>
+                <div class="dataDiv"><p class="data">Dzisiaj jest 24 marca 2020, 13:21</p></div>
+                <div id="f1" class="forum">
+                    <div class="gora">
+                        <div id="col1" class="cell" style="grid-column: 1">
+                            <p><a href="#" target="_self">OGÓLNE</a></p>
+                        </div>
+                        <div class="cell" style="grid-column: 3;text-align: center;">
+                            <p>TEMATY</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4;text-align: center;">
+                            <p>POSTY</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5">
+                            <p>OSTATNI POST</p>
+                        </div>
+                    </div>
+                    <div class="linia" style="margin-top: 10px;">
+                        <div class="dziwnyZnaczekContainer" style="grid-column: 1;">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>
+                                    <rect x="8" y="8" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="10.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="13" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="16.5" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="19" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="21.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2;">
+                            <p><a href="#" target="_self">Opinie</a></p>
+                            <p>Sugestie i uwagi na temat działalności i funkcjonowania serwisu.</p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">67</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">727</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p><a href="#" target="_self">Re: phpBB 3.3.0</a></p>
+                            <p>autor: <a id="underlineNeeded" href="#" target="_self" style="font-weight: normal;">Wazdar</a> <a href="#" target="_self" style="color: #4c577d">&nearr;</a></p>
+                            <p>11 marca 2020, 10:11</p>
+                        </div>
+                    </div>
+                    <div class="linia">
+                        <div class="dziwnyZnaczekContainer" style="grid-column: 1">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>                                        
+                                    <rect x="8" y="8" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="10.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="13" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="16.5" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="19" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="21.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                </svg>
+                                <div class="mniejszzyDziwnyZnaczek">
+                                    <svg x="0" y="0" width="15" height="15">
+                                        <circle cx="7.5" cy="7.5" r="7.5" style="fill: #2c7ea3"/>
+                                        <circle cx="7.5" cy="7.5" r="5.5" style="fill: #f7f9fa"/>
+                                        <circle cx="7.5" cy="7.5" r="3.5" style="fill: #e8ecee"/>
+                                        <rect x="4" y="5.5" width="4" height="1.5" style="fill: #6c6c6c"/>
+                                        <rect x="4" y="8" width="7" height="1.5" style="fill: #6c6c6c"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2">
+                            <p><a href="#" target="_self">Polski pakiet językowy</a></p>
+                            <p>Wszystko o polskim tłumaczeniu do poszczególnych wydań phpBB.</p>
+                            <p style="color: black">Subfora: &#128196; <a href="#" target="_self">[3.2.x]</a>, &#128196; <a href="#" target="_self">[3.1.x]</a>, &#128196; <a href="#" target="_self">[3.0.x]</a></p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">66</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">353</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p><a href="#" target="_self">Polski pakiet językowy dla...</a></p>
+                            <p>autor: <a id="underlineNeeded" href="#" target="_self" style="color: #00aa00">vader</a> <a href="#" target="_self" style="color: #4c577d">&nearr;</a></p>
+                            <p>20 stycznia 2020, 07:51</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div id="f2" class="forum">
+                    <div class="gora">
+                        <div id="col1" class="cell" style="grid-column: 1">
+                            <p><a href="#" target="_self">PHPBB 3.2.X</a></p>
+                        </div>
+                        <div class="cell" style="grid-column: 3;text-align: center;">
+                            <p>TEMATY</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4;text-align: center;">
+                            <p>POSTY</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5">
+                            <p>OSTATNI POST</p>
+                        </div>
+                    </div>
+                    <div class="linia" style="margin-top: 10px;">
+                        <div class="dziwnyZnaczekContainer" style="grid-column: 1">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>                                        
+                                    <rect x="8" y="8" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="10.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="13" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="16.5" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="19" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="21.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                </svg>
+                                <div class="mniejszzyDziwnyZnaczek">
+                                    <svg x="0" y="0" width="15" height="15">
+                                        <circle cx="7.5" cy="7.5" r="7.5" style="fill: #2c7ea3"/>
+                                        <circle cx="7.5" cy="7.5" r="5.5" style="fill: #f7f9fa"/>
+                                        <circle cx="7.5" cy="7.5" r="3.5" style="fill: #e8ecee"/>
+                                        <rect x="4" y="5.5" width="4" height="1.5" style="fill: #6c6c6c"/>
+                                        <rect x="4" y="8" width="7" height="1.5" style="fill: #6c6c6c"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2;">
+                            <p><a href="#" target="_self">Użytkowanie</a></p>
+                            <p>Pomoc przy instalacji oraz użytkowaniu phpBB 3.2.x. Forum nie służy do zgłaszania znalezionych błędów, innowacji lub problemów związanych ze stylami i rozszerzeniami.</p>
+                            <p style="color: black">Subfora: &#128196; <a href="#" target="_self">Integracja</a>, &#128196; <a href="#" target="_self">Konwersja</a></p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">229</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">1411</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p><a href="#" target="_self">Sprawdzenie czy użytkow...</a></p>
+                            <p>autor: <a id="underlineNeeded" href="#" target="_self" style="font-weight: normal;">Wiessiek</a> <a href="#" target="_self" style="color: #4c577d">&nearr;</a></p>
+                            <p>15 marca 2020, 14:27</p>
+                        </div>
+                    </div>
+                    <div class="linia">
+                        <div class="dziwnyZnaczekContainer" style="grid-column: 1">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>                                        
+                                    <rect x="8" y="8" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="10.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="13" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="16.5" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="19" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="21.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                </svg>
+                                <div class="mniejszzyDziwnyZnaczek">
+                                    <svg x="0" y="0" width="15" height="15">
+                                        <circle cx="7.5" cy="7.5" r="7.5" style="fill: #2c7ea3"/>
+                                        <circle cx="7.5" cy="7.5" r="5.5" style="fill: #f7f9fa"/>
+                                        <circle cx="7.5" cy="7.5" r="3.5" style="fill: #e8ecee"/>
+                                        <rect x="4" y="5.5" width="4" height="1.5" style="fill: #6c6c6c"/>
+                                        <rect x="4" y="8" width="7" height="1.5" style="fill: #6c6c6c"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2">
+                            <p><a href="#" target="_self">Rozszerzenia</a></p>
+                            <p>Pomoc przy instalacji i konfiguracji rozszerzeń do phpBB 3.2.x.. Dyskusje na ich temat oraz baza dodatków i spolszczeń.</p>
+                            <p style="color: black">Subfora: &#128196; <a href="#" target="_self">Pomoc</a>, &#128196; <a href="#" target="_self">Poszukiwania</a>, &#128196; <a href="#" target="_self">Polskie lokalizacje</a>, &#128196; <a href="#" target="_self">Rozszerzenia użytkowników</a>, &#128196; <a href="#" target="_self">Dla deweloperów</a></p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">130</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">538</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p><a href="#" target="_self">Re: Problem z doinstalowa…</a></p>
+                            <p>autor: <a id="underlineNeeded" href="#" target="_self" style="color: #00aa00">vader</a> <a href="#" target="_self" style="color: #4c577d">&nearr;</a></p>
+                            <p>wczoraj, 21:46</p>
+                        </div>
+                    </div>
+                    <div class="linia">
+                        <div class="dziwnyZnaczekContainer" style="grid-column: 1">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>                                        
+                                    <rect x="8" y="8" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="10.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="13" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="16.5" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="19" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="21.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                </svg>
+                                <div class="mniejszzyDziwnyZnaczek">
+                                    <svg x="0" y="0" width="15" height="15">
+                                        <circle cx="7.5" cy="7.5" r="7.5" style="fill: #2c7ea3"/>
+                                        <circle cx="7.5" cy="7.5" r="5.5" style="fill: #f7f9fa"/>
+                                        <circle cx="7.5" cy="7.5" r="3.5" style="fill: #e8ecee"/>
+                                        <rect x="4" y="5.5" width="4" height="1.5" style="fill: #6c6c6c"/>
+                                        <rect x="4" y="8" width="7" height="1.5" style="fill: #6c6c6c"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2;">
+                            <p><a href="#" target="_self">Style</a></p>
+                            <p>Pomoc i dyskusje na temat stylów do phpBB 3.2.x. Baza dodatków, tłumaczeń oraz stylów stworzonych przez użytkowników forum.</p>
+                            <p style="color: black">Subfora: &#128196; <a href="#" target="_self">Pomoc</a>, &#128196; <a href="#" target="_self">komponenty</a>, &#128196; <a href="#" target="_self">Style użytkowników</a></p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">49</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">250</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p><a href="#" target="_self">Re: Ikony forum responsive ?</a></p>
+                            <p>autor: <a id="underlineNeeded" href="#" target="_self" style="font-weight: normal;">lalanablanalala</a> <a href="#" target="_self" style="color: #4c577d">&nearr;</a></p>
+                            <p>18 lutego 2020, 22:06</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div id="f3" class="forum">
+                    <div class="gora">
+                        <div id="col1" class="cell" style="grid-column: 1">
+                            <p><a href="#" target="_self">PHPBB 3.1.X</a></p>
+                        </div>
+                        <div class="cell" style="grid-column: 3;text-align: center;">
+                            <p>TEMATY</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4;text-align: center;">
+                            <p>POSTY</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5">
+                            <p>OSTATNI POST</p>
+                        </div>
+                    </div>
+                    <div class="linia" style="margin-top: 10px;">
+                        <div class="dziwnyZnaczekContainer" style="height: 60px;grid-column: 1">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>                                        
+                                    <rect x="8" y="8" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="10.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="13" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="16.5" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="19" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="21.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                </svg>
+                                <div class="mniejszzyDziwnyZnaczek">
+                                    <svg x="0" y="0" width="15" height="15">
+                                        <circle cx="7.5" cy="7.5" r="7.5" style="fill: #2c7ea3"/>
+                                        <circle cx="7.5" cy="7.5" r="5.5" style="fill: #f7f9fa"/>
+                                        <circle cx="7.5" cy="7.5" r="3.5" style="fill: #e8ecee"/>
+                                        <rect x="4" y="5.5" width="4" height="1.5" style="fill: #6c6c6c"/>
+                                        <rect x="4" y="8" width="7" height="1.5" style="fill: #6c6c6c"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2">
+                            <p><a href="#" target="_self">Użytkowanie</a></p>
+                            <p>Pomoc przy instalacji oraz użytkowaniu phpBB 3.1.x. Forum nie służy do zgłaszania znalezionych błędów, innowacji lub problemów związanych ze stylami i modyfikacjami.</p>
+                            <p style="color: black">Subfora: &#128196; <a href="#" target="_self">Integracja</a>, &#128196; <a href="#" target="_self">Konwersja</a></p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">293</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">1286</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p><a href="#" target="_self">Re: Forum finansowe - zarz…</a></p>
+                            <p>autor: <a id="underlineNeeded" href="#" target="_self" style="color: #00aa00">vader</a> <a href="#" target="_self" style="color: #4c577d">&nearr;</a></p>
+                            <p>wczoraj, 21:47</p>
+                        </div>
+                    </div>
+                    <div class="linia">
+                        <div class="dziwnyZnaczekContainer" style="grid-column: 1">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>                                        
+                                    <rect x="8" y="8" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="10.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="13" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="16.5" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="19" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="21.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                </svg>
+                                <div class="mniejszzyDziwnyZnaczek">
+                                    <svg x="0" y="0" width="15" height="15">
+                                        <circle cx="7.5" cy="7.5" r="7.5" style="fill: #2c7ea3"/>
+                                        <circle cx="7.5" cy="7.5" r="5.5" style="fill: #f7f9fa"/>
+                                        <circle cx="7.5" cy="7.5" r="3.5" style="fill: #e8ecee"/>
+                                        <rect x="4" y="5.5" width="4" height="1.5" style="fill: #6c6c6c"/>
+                                        <rect x="4" y="8" width="7" height="1.5" style="fill: #6c6c6c"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2">
+                            <p><a href="#" target="_self">Rozszerzenia</a></p>
+                            <p>Pomoc przy instalacji i konfiguracji rozszerzeń do phpBB 3.1.x.. Dyskusje na ich temat oraz baza dodatków i spolszczeń.</p>
+                            <p style="color: black">Subfora: &#128196; <a href="#" target="_self">Pomoc</a>, &#128196; <a href="#" target="_self">Poszukiwania</a>, &#128196; <a href="#" target="_self">Polskie lokalizacje</a>, &#128196; <a href="#" target="_self">Rozszerzenia użytkowników</a>, &#128196; <a href="#" target="_self">Dla deweloperów</a></p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">149</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">575</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p><a href="#" target="_self">Re: Highslide dla polskiej...</a></p>
+                            <p>autor: <a id="underlineNeeded" href="#" target="_self" style="color: #00aa00">vader</a> <a href="#" target="_self" style="color: #4c577d">&nearr;</a></p>
+                            <p>16 marca 2020, 10:44</p>
+                        </div>
+                    </div>
+                    <div class="linia">
+                        <div class="dziwnyZnaczekContainer" style="grid-column: 1">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>                                        
+                                    <rect x="8" y="8" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="10.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="13" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="16.5" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="19" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="21.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                </svg>
+                                <div class="mniejszzyDziwnyZnaczek">
+                                    <svg x="0" y="0" width="15" height="15">
+                                        <circle cx="7.5" cy="7.5" r="7.5" style="fill: #2c7ea3"/>
+                                        <circle cx="7.5" cy="7.5" r="5.5" style="fill: #f7f9fa"/>
+                                        <circle cx="7.5" cy="7.5" r="3.5" style="fill: #e8ecee"/>
+                                        <rect x="4" y="5.5" width="4" height="1.5" style="fill: #6c6c6c"/>
+                                        <rect x="4" y="8" width="7" height="1.5" style="fill: #6c6c6c"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2;">
+                            <p><a href="#" target="_self">Style</a></p>
+                            <p>Pomoc i dyskusje na temat stylów do phpBB 3.1.x. Baza dodatków, tłumaczeń oraz stylów stworzonych przez użytkowników forum.</p>
+                            <p style="color: black">Subfora: &#128196; <a href="#" target="_self">Pomoc</a>, &#128196; <a href="#" target="_self">komponenty</a>, &#128196; <a href="#" target="_self">Style użytkowników</a></p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">86</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">346</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p><a href="#" target="_self">Re: Downgrade stylu</a></p>
+                            <p>autor: <a id="underlineNeeded" href="#" target="_self" style="color: #00aa00">vader</a> <a href="#" target="_self" style="color: #4c577d">&nearr;</a></p>
+                            <p>09 maja 2019, 13:18</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div id="f4" class="forum">
+                    <div class="gora">
+                        <div id="col1"  class="cell" style="grid-column: 1;">
+                            <p><a href="#" target="_self">POZOSTAŁE</a></p>
+                        </div>
+                        <div class="cell" style="grid-column: 3;text-align: center;">
+                            <p>TEMATY</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4;text-align: center;">
+                            <p>POSTY</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5">
+                            <p>OSTATNI POST</p>
+                        </div>
+                    </div>
+                    <div class="linia" style="margin-top: 10px;">
+                        <div class="dziwnyZnaczekContainer" style="grid-column: 1">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>
+                                    <rect x="8" y="8" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="10.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="13" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="16.5" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="19" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="21.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2">
+                            <p><a href="#" target="_self">Dyskusje o phpBB</a></p>
+                            <p>Tutaj możesz luźno podyskutować o skrypcie phpBB. To forum nie służy do zgłaszania problemów, wykrytych błędów czy pytań odnośnie modyfikacji i stylów.</p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">165</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">980</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p><a href="#" target="_self">Re: GSC nie indexuje</a></p>
+                            <p>autor: <a id="underlineNeeded" href="#" target="_self" style="color: #00aa00">vader</a> <a href="#" target="_self" style="color: #4c577d">&nearr;</a></p>
+                            <p>20 marca 2020, 12:24</p>
+                        </div>
+                    </div>
+                    <div class="linia">
+                        <div class="dziwnyZnaczekContainer" style="grid-column: 1">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>
+                                    <rect x="8" y="8" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="10.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="13" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="16.5" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="19" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="21.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2">
+                            <p><a href="#" target="_self">Webmastering</a></p>
+                            <p>Forum poświęcone skryptom, językom programowania, serwerom i hostingowi, domenom itp.</p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">266</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">1435</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p><a href="#" target="_self">Re: Przeniesienie hostingu...</a></p>
+                            <p>autor: <a id="underlineNeeded" href="#" target="_self" style="font-weight: normal;">Citizen Kane</a> <a href="#" target="_self" style="color: #4c577d">&nearr;</a></p>
+                            <p>09 lutego 2020, 17:57</p>
+                        </div>
+                    </div>
+                    <div class="linia">
+                        <div class="dziwnyZnaczekContainer" style="grid-column: 1">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>
+                                    <rect x="8" y="8" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="10.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="13" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="16.5" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="19" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="21.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2">
+                            <p><a href="#" target="_self">Ogólne dyskusje</a></p>
+                            <p>Rozmowy z innymi użytkownikami forum na różne tematy, niekoniecznie związane ze skryptem phpBB.</p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">694</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">3665</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p><a href="#" target="_self">Re: Błąd recaptcha</a></p>
+                            <p>autor: <a id="underlineNeeded" href="#" target="_self" style="color: #00aa00">vader</a> <a href="#" target="_self" style="color: #4c577d">&nearr;</a></p>
+                            <p>wczoraj, 17:37</p>
+                        </div>
+                    </div>
+                    <div class="linia">
+                        <div class="dziwnyZnaczekContainer" style="grid-column: 1">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>
+                                    <rect x="8" y="8" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="10.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="13" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="16.5" width="8" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="19" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                    <rect x="8" y="21.5" width="13" height="1.5" style="fill: #6c6c6c"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2">
+                            <p><a href="#" target="_self">Oferty</a></p>
+                            <p>Forum służące do umieszczanie zleceń i ofert. Stare oferty znikają po 30 dniach.</p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">0</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">0</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p>Nie ma postów</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div id="f5"class="forum">
+                    <div class="gora">
+                        <div id="col1"  class="cell" style="grid-column: 1;">
+                            <p><a href="#" target="_self">PHPBB 2.0.X, 3.0.X</a></p>
+                        </div>
+                        <div class="cell" style="grid-column: 3;text-align: center;">
+                            <p>TEMATY</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4;text-align: center;">
+                            <p>POSTY</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5">
+                            <p>OSTATNI POST</p>
+                        </div>
+                    </div>
+                    <div class="linia" style="margin-top: 10px;">
+                        <div class="dziwnyZnaczekContainer" style="grid-column: 1">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>
+                                    <polygon points="10,15 20,15 20,23 10,23 10,15" style="fill: #6c6c6c"/>
+                                    <polygon points="12,15 12,11 13,10 17,10 18,11 18,15 16,15 16,12 14,12 14,15" style="fill: #6c6c6c"/>
+                                    <rect x="13" y="17.5" height="1" width="4" style="fill: #e8ecee"/>
+                                    <rect x="13" y="19.5" height="1" width="4" style="fill: #e8ecee"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2">
+                            <p><a href="#" target="_self">Archiwum 2.0.x</a></p>
+                            <p>Archiwum tematów dotyczących phpBB 2.0.x. Wsparcie zostało zakończone 01 stycznia 2009 roku.</p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">3873</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">17772</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p><a href="#" target="_self">Re: Wyświetlanie Załącz…</a></p>
+                            <p>autor: <a id="underlineNeeded" href="#" target="_self" style="font-weight: normal;">Bielu</a> <a href="#" target="_self" style="color: #4c577d">&nearr;</a></p>
+                            <p>21 stycznia 2015, 07:13</p>
+                        </div>
+                    </div>
+                    <div class="linia">
+                        <div class="dziwnyZnaczekContainer" style="grid-column: 1">
+                            <div class="dziwnyZnaczek">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <circle cx="15" cy="15" r="15" style="fill: #2c7ea3"/>
+                                    <circle cx="15" cy="15" r="13" style="fill: #f7f9fa"/>
+                                    <circle cx="15" cy="15" r="11" style="fill: #e8ecee"/>
+                                    <polygon points="10,15 20,15 20,23 10,23 10,15" style="fill: #6c6c6c"/>
+                                    <polygon points="12,15 12,11 13,10 17,10 18,11 18,15 16,15 16,12 14,12 14,15" style="fill: #6c6c6c"/>
+                                    <rect x="13" y="17.5" height="1" width="4" style="fill: #e8ecee"/>
+                                    <rect x="13" y="19.5" height="1" width="4" style="fill: #e8ecee"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="cell" style="grid-column: 2">
+                            <p><a href="#" target="_self">Archiwum 3.0.x</a></p>
+                            <p>Archiwum tematów dotyczących phpBB 3.0.x. Wsparcie zostało zakończone</p>
+                        </div>
+                        <div class="cell" style="grid-column: 3; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">6585</p>
+                        </div>
+                        <div class="cell" style="grid-column: 4; text-align: center;">
+                            <p style="font-size: 13px;margin: 15px 0 15px 0;">30612</p>
+                        </div>
+                        <div class="cell" style="grid-column: 5;padding-left: 6px;">
+                            <p><a href="#" target="_self">Re: Galeria na forum - pro…</a></p>
+                            <p>autor: <a id="underlineNeeded" href="#" target="_self" style="font-weight: normal;">MaRRcin929</a> <a href="#" target="_self" style="color: #4c577d">&nearr;</a></p>
+                            <p>02 marca 2017, 02:10</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="for1" class="formularz">
+                    <p>
+                        <a id="underlineNeeded" href="#" target="_self">ZALOGUJ SIĘ </a>
+                        &#8226;
+                        <a id="underlineNeeded" href="#" target="_self"> ZAREJESTRUJ SIĘ</a>
+                    </p>
+                    <div class="pasek"></div>
+                    <label>Nazwa użytkownika: </label><input type="text"/>
+                    <label>Hasło: </label><input type="text"/>
+                    <label><a href="#" target="_self">Nie pamiętam hasła</a> | Zapamiętaj mnie</label><input type="checkbox">
+                    <button type="button">Zaloguj się</button>
+                </div>
+                <div id="for2" class="formularz">
+                    <p style="color: #105289; font-size: 12px;">
+                        KTO JEST ONLINE
+                    </p>
+                    <div class="pasek" style="margin: 1px 0 5px 0;"></div>
+                    <p>
+                        Jest 39 użytkowników online :: 0 zarejestrowanych, 0 ukrytych i 39 gości (wg danych z ostatnich 5 minut)<br>
+                        Najwięcej użytkowników (747) było online 14 grudnia 2015, 16:51
+                    </p>
+                </div>
+                <div id="for3" class="formularz">
+                    <p style="color: #105289; font-size: 12px;">
+                        URODZINY
+                    </p>
+                    <div class="pasek"></div>
+                    <p style="margin-top: 5px;">
+                        Nikt dzisiaj nie obchodzi urodzin
+                    </p>
+                </div>
+                <div id="for4" class="formularz">
+                    <p style="color: #105289; font-size: 12px;">
+                        STATYSTYKI
+                    </p>
+                    <div class="pasek" style="margin: 1px 0 5px 0;"></div>
+                    <p>
+                        Liczba postów: <b>61470 •</b> Liczba tematów: <b>12668 •</b> Liczba użytkowników: <b>12266 •</b> Ostatnio zarejestrowany użytkownik: <a id="underlineNeeded" href="#" target="_self" style="font-weight: bold;">bartwr</a>
+                    </p>
+                </div>
+                <div class="stopka">
+                    <div class="lewa">
+                        <p style="margin: 7px 0 7px 0">&#x1F3E0; <a id="underlineNeeded" href="#" target="_self">Strona główna</a></p>
+                    </div>
+                    <div class="prawa">
+                        <p>Strefa czasowa UTC+01:00</p>
+                        <p><a id="underlineNeeded" href="#" target="_self"><b>&#9960;</b> usuń ciasteczka witryny</a></p>
+                        <p><a id="underlineNeeded" href="#" target="_self"><b>&#128465;</b> Zespół administracyjny</a></p>
+                        <p><a id="underlineNeeded" href="#" target="_self"><b>&#x2709;</b> Kontakt z nami</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
