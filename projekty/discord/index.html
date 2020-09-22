@@ -1,374 +1,425 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="styles.css"/> 
-        <link rel="shortcut icon" type="image/ico" href="discord-icon.ico"/>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
-        <title>Discord</title>
-    </head>
 
-    <body>
-        <div class="content">
-            <div class="header">
-                <div class="logo">
-                    <image src="Discord-logo.png" alt="logo"/> 
-                </div>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="shortcut icon" type="image/ico" href="discord-icon.ico" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Discord</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="logo">
+                <image src="Discord-logo.png" alt="logo" />
             </div>
-            <div class="serwery">
-                <div class="serwer">
-                    <div class="whiteStripe"></div>
-                    <image class="userImage" src="User-image.png" alt="user image" style="width: 36px; height: 36px;"/>
-                    <div id="d1" class="dymekSerwera" style="top: 18px;"><b><p>Strona główna</p></b></div>
-                </div>
-                <div class="greyStripe"></div>
-                <div class="serwer" style="margin-top: 5px;">
-                    <div class="whiteStripeP"></div>
-                    <image class="userImage" src="User-image-s.png" alt="user image" style="width: 15px; height: 18px;"/>
-                    <div id="d1" class="dymekSerwera" style="top: 80px; width: 70px"><b><p>Serwer</p></b></div>
-                </div>
-                <div class="serwer">
-                    <div class="whiteStripe" style="width: 4px; height: 35px;"></div>
-                    <image class="userImage" src="User-image-zsl.jpg" alt="user image" style="border-radius: 35%;"/>
-                    <div id="d1" class="dymekSerwera" style="top: 138px; width: 90px"><b><p>Łączność</p></b></div>
-                </div>
-                <div class="serwer">
-                    <div class="whiteStripe"></div>
-                    <image class="userImage" src="User-image-s.png" alt="user image" style="width: 15px; height: 18px;"/>
-                    <div id="d1" class="dymekSerwera" style="top: 196px; width: 70px"><b><p>Serwer</p></b></div>
-                </div>
-                <div class="serwerV2">
-                    <div class="whiteStripe"></div>
-                    <svg x="0" y="0" width="50" height="50">
-                        <rect x="24" y="15" width="1.5" height="20"/>
-                        <rect x="15" y="24" width="20" height="1.5"/>
+        </div>
+        <div class="serwery">
+            <div class="serwer">
+                <div class="whiteStripe"></div>
+                <image class="userImage" src="User-image.png" alt="user image" style="width: 36px; height: 36px;" />
+                <div id="d1" class="dymekSerwera" style="top: 18px;"><b>
+                        <p>Strona główna</p>
+                    </b></div>
+            </div>
+            <div class="greyStripe"></div>
+            <div class="serwer" style="margin-top: 5px;">
+                <div class="whiteStripeP"></div>
+                <image class="userImage" src="User-image-s.png" alt="user image" style="width: 15px; height: 18px;" />
+                <div id="d1" class="dymekSerwera" style="top: 80px; width: 70px"><b>
+                        <p>Serwer</p>
+                    </b></div>
+            </div>
+            <div class="serwer">
+                <div class="whiteStripe" style="width: 4px; height: 35px;"></div>
+                <image class="userImage" src="User-image-zsl.jpg" alt="user image" style="border-radius: 35%;" />
+                <div id="d1" class="dymekSerwera" style="top: 138px; width: 90px"><b>
+                        <p>Łączność</p>
+                    </b></div>
+            </div>
+            <div class="serwer">
+                <div class="whiteStripe"></div>
+                <image class="userImage" src="User-image-s.png" alt="user image" style="width: 15px; height: 18px;" />
+                <div id="d1" class="dymekSerwera" style="top: 196px; width: 70px"><b>
+                        <p>Serwer</p>
+                    </b></div>
+            </div>
+            <div class="serwerV2">
+                <div class="whiteStripe"></div>
+                <svg x="0" y="0" width="50" height="50">
+                    <rect x="24" y="15" width="1.5" height="20" />
+                    <rect x="15" y="24" width="20" height="1.5" />
+                </svg>
+                <div id="d1" class="dymekSerwera" style="top: 252px; width: 110px"><b>
+                        <p>Dodaj serwer</p>
+                    </b></div>
+            </div>
+            <div class="serwerV2">
+                <div class="whiteStripe"></div>
+                <svg x="0" y="0" width="50" height="50">
+                    <circle cx="22" cy="22" r="7" />
+                    <circle id="circle" cx="22" cy="22" r="5" />
+                    <polygon points="25,25 26,24.5 33,31 32,32" />
+                </svg>
+                <div id="d1" class="dymekSerwera" style="top: 312px; width: 195px"><b>
+                        <p>Wyszukiwanie serwerów</p>
+                    </b></div>
+            </div>
+        </div>
+        <div class="lewaKolumna">
+            <div class="bottomHeaderLeft">
+                <div class="znaczekBottomHeaderLeft">
+                    <svg x="0" y="0" width="15" height="15">
+                        <circle cx="7.5" cy="7.5" r="7.5" />
+                        <polygon points="7,3.5 8,3.5 10,6 10,10 8,12 7,12 5,10 5,6" style="fill: white" />
+                        <polygon points="7,4.3 8,4.3 9.3,6 9.3,10 8,11.3 7,11.3 5.7,10 5.7,6" />
                     </svg>
-                    <div id="d1" class="dymekSerwera" style="top: 252px; width: 110px"><b><p>Dodaj serwer</p></b></div>
                 </div>
-                <div class="serwerV2">
-                    <div class="whiteStripe"></div>
-                    <svg x="0" y="0" width="50" height="50">
-                        <circle cx="22" cy="22" r="7"/>
-                        <circle id="circle" cx="22" cy="22" r="5"/>
-                        <polygon points="25,25 26,24.5 33,31 32,32"/>
+                <div class="textBottomHeaderLeft">
+                    <b>
+                        <p>Łączność</p>
+                    </b>
+                </div>
+                <div class="strzalkaBottomHeaderLeft">
+                    <svg x="0" y="0" width="50" height="40">
+                        <polygon points="18,18 19,16 25,23 31,16 32,18 25,25" />
                     </svg>
-                    <div id="d1" class="dymekSerwera" style="top: 312px; width: 195px"><b><p>Wyszukiwanie serwerów</p></b></div>
                 </div>
             </div>
-            <div class="lewaKolumna">
-                <div class="bottomHeaderLeft">
-                    <div class="znaczekBottomHeaderLeft">
-                        <svg x="0" y="0" width="15" height="15">
-                            <circle cx="7.5" cy="7.5" r="7.5"/>
-                            <polygon points="7,3.5 8,3.5 10,6 10,10 8,12 7,12 5,10 5,6" style="fill: white"/>
-                            <polygon points="7,4.3 8,4.3 9.3,6 9.3,10 8,11.3 7,11.3 5.7,10 5.7,6"/>
+            <details>
+                <summary>
+                    <hr class="pasek" style="width: 60px">
+                    <p>Administracja</p>
+                    <hr class="pasek" style="width: 60px">
+                </summary>
+                <div class="zawartoscDetails">
+                    <div class="kanalGlosowy">
+                        <svg x="0" y="0" width="30" height="30">
+                            <circle cx=15 cy="15" r="8" style="fill: #b1b2b4" />
+                            <circle cx=15 cy="15" r="6" class="glosnik" />
+                            <circle cx=15 cy="15" r="4" style="fill: #b1b2b4" />
+                            <circle cx=15 cy="15" r="2" class="glosnik" />
+                            <rect x="0" y="0" width="15" height="30" class="glosnik" />
+                            <polygon points="3,13.5 3,17.5 8,17.5 12,22.5 12,7.5 8,13.5" style="fill: #b1b2b4" />
                         </svg>
-                    </div>
-                    <div class="textBottomHeaderLeft">
-                        <b><p>Łączność</p></b>
-                    </div>
-                    <div class="strzalkaBottomHeaderLeft">
-                        <svg x="0" y="0" width="50" height="40">
-                            <polygon points="18,18 19,16 25,23 31,16 32,18 25,25"/>
+                        <div class="pojemnikNaTekst">
+                            <p>Kibel bez papieru (AFK)</p>
+                        </div>
+                        <svg class="ludek" x="0" y="0" width="30" height="30">
+                            <circle cx=13 cy="20" r="5" />
+                            <circle cx=17 cy="20" r="5" />
+                            <rect x="13" y="15" width="5" height="10" />
+                            <circle cx=15 cy="10" r="4" />
+                            <rect x="23" y="3" width="1" height="8" />
+                            <rect x="19.5" y="6.5" width="8" height="1" />
                         </svg>
                     </div>
                 </div>
-                <details>
-                    <summary><hr class="pasek" style="width: 60px"><p>Administracja</p><hr class="pasek" style="width: 60px"></summary>
-                    <div class="zawartoscDetails">
-                        <div class="kanalGlosowy">
-                            <svg x="0" y="0" width="30" height="30">
-                                <circle cx=15 cy="15" r="8" style="fill: #b1b2b4"/>
-                                <circle cx=15 cy="15" r="6" class="glosnik"/>
-                                <circle cx=15 cy="15" r="4" style="fill: #b1b2b4"/>
-                                <circle cx=15 cy="15" r="2" class="glosnik"/>
-                                <rect x="0" y="0" width="15" height="30" class="glosnik"/>
-                                <polygon points="3,13.5 3,17.5 8,17.5 12,22.5 12,7.5 8,13.5" style="fill: #b1b2b4"/>
-                            </svg>
-                            <div class="pojemnikNaTekst"><p>Kibel bez papieru (AFK)</p></div>
-                            <svg class="ludek" x="0" y="0" width="30" height="30">
-                                <circle cx=13 cy="20" r="5"/>
-                                <circle cx=17 cy="20" r="5"/>
-                                <rect x="13" y="15" width="5" height="10"/>
-                                <circle cx=15 cy="10" r="4"/>
-                                <rect x="23" y="3" width="1" height="8"/>
-                                <rect x="19.5" y="6.5" width="8" height="1"/>
-                            </svg>
+            </details>
+            <details>
+                <summary>
+                    <hr class="pasek" style="width: 83px">
+                    <p>Ogólne</p>
+                    <hr class="pasek" style="width: 83px">
+                </summary>
+                <div class="zawartoscDetails" style="height: 110px;">
+                    <div class="kanalTekstowy">
+                        <svg x="0" y="0" width="30" height="30">
+                            <polygon points="7,8 8.5,8 6,22 4.5,22" style="fill: #b1b2b4" />
+                            <polygon points="15,8 16.5,8 14,22 12.5,22" style="fill: #b1b2b4" />
+                            <rect x="3" y="12" width="16" height="1.5" style="fill: #b1b2b4" />
+                            <rect x="2" y="16.5" width="16.5" height="1.5" style="fill: #b1b2b4" />
+                        </svg>
+                        <div class="pojemnikNaTekst">
+                            <p>ogólny</p>
                         </div>
-                    </div>
-                </details>
-                <details>
-                    <summary><hr class="pasek"style="width: 83px"><p>Ogólne</p><hr class="pasek"style="width: 83px"></summary>
-                    <div class="zawartoscDetails"style="height: 110px;">
-                        <div class="kanalTekstowy">
-                            <svg x="0" y="0" width="30" height="30">
-                                <polygon points="7,8 8.5,8 6,22 4.5,22" style="fill: #b1b2b4"/>
-                                <polygon points="15,8 16.5,8 14,22 12.5,22" style="fill: #b1b2b4"/>
-                                <rect x="3" y="12" width="16" height="1.5" style="fill: #b1b2b4"/>
-                                <rect x="2" y="16.5" width="16.5" height="1.5" style="fill: #b1b2b4"/>
-                            </svg>
-                            <div class="pojemnikNaTekst"><p>ogólny</p></div>
-                            <svg class="ludek" x="0" y="0" width="30" height="30">
-                                <circle cx=13 cy="20" r="5"/>
-                                <circle cx=17 cy="20" r="5"/>
-                                <rect x="13" y="15" width="5" height="10"/>
-                                <circle cx=15 cy="10" r="4"/>
-                                <rect x="23" y="3" width="1" height="8"/>
-                                <rect x="19.5" y="6.5" width="8" height="1"/>
-                            </svg>
-                        </div>
-                        <div class="kanalTekstowy">
-                            <svg x="0" y="0" width="30" height="30">
-                                <polygon points="7,8 8.5,8 6,22 4.5,22" style="fill: #b1b2b4"/>
-                                <polygon points="15,8 16.5,8 14,22 12.5,22" style="fill: #b1b2b4"/>
-                                <rect x="3" y="12" width="16" height="1.5" style="fill: #b1b2b4"/>
-                                <rect x="2" y="16.5" width="16.5" height="1.5" style="fill: #b1b2b4"/>
-                            </svg>
-                            <div class="pojemnikNaTekst"><p>regulamin</p></div>
-                            <svg class="ludek" x="0" y="0" width="30" height="30">
-                                <circle cx=13 cy="20" r="5"/>
-                                <circle cx=17 cy="20" r="5"/>
-                                <rect x="13" y="15" width="5" height="10"/>
-                                <circle cx=15 cy="10" r="4"/>
-                                <rect x="23" y="3" width="1" height="8"/>
-                                <rect x="19.5" y="6.5" width="8" height="1"/>
-                            </svg>
-                        </div>
-                        <div class="kanalTekstowy">
-                            <svg x="0" y="0" width="30" height="30">
-                                <polygon points="7,8 8.5,8 6,22 4.5,22" style="fill: #b1b2b4"/>
-                                <polygon points="15,8 16.5,8 14,22 12.5,22" style="fill: #b1b2b4"/>
-                                <rect x="3" y="12" width="16" height="1.5" style="fill: #b1b2b4"/>
-                                <rect x="2" y="16.5" width="16.5" height="1.5" style="fill: #b1b2b4"/>
-                            </svg>
-                            <div class="pojemnikNaTekst"><p>ogłoszenia</p></div>
-                            <svg class="ludek" x="0" y="0" width="30" height="30">
-                                <circle cx=13 cy="20" r="5"/>
-                                <circle cx=17 cy="20" r="5"/>
-                                <rect x="13" y="15" width="5" height="10"/>
-                                <circle cx=15 cy="10" r="4"/>
-                                <rect x="23" y="3" width="1" height="8"/>
-                                <rect x="19.5" y="6.5" width="8" height="1"/>
-                            </svg>
-                        </div>
-                    </div>
-                </details>
-                <details>
-                    <summary><hr class="pasek"><p>Klasy drugie - 2</p><hr class="pasek"></summary>
-                    <div class="zawartoscDetails">
-                        <div class="kanalTekstowy">
-                            <svg x="0" y="0" width="30" height="30">
-                                <polygon points="7,8 8.5,8 6,22 4.5,22" style="fill: #b1b2b4"/>
-                                <polygon points="15,8 16.5,8 14,22 12.5,22" style="fill: #b1b2b4"/>
-                                <rect x="3" y="12" width="16" height="1.5" style="fill: #b1b2b4"/>
-                                <rect x="2" y="16.5" width="16.5" height="1.5" style="fill: #b1b2b4"/>
-                            </svg>
-                            <div class="pojemnikNaTekst"><p>2ia</p></div>
-                            <svg class="ludek" x="0" y="0" width="30" height="30">
-                                <circle cx=13 cy="20" r="5"/>
-                                <circle cx=17 cy="20" r="5"/>
-                                <rect x="13" y="15" width="5" height="10"/>
-                                <circle cx=15 cy="10" r="4"/>
-                                <rect x="23" y="3" width="1" height="8"/>
-                                <rect x="19.5" y="6.5" width="8" height="1"/>
-                            </svg>
-                        </div>
-                        <div class="kanalGlosowy" style="height: 110px;">
-                            <svg x="0" y="0" width="30" height="30">
-                                <circle cx=15 cy="15" r="8" style="fill: #b1b2b4"/> 
-                                <circle cx=15 cy="15" r="6" class="glosnik"/>
-                                <circle cx=15 cy="15" r="4" style="fill: #b1b2b4"/>
-                                <circle cx=15 cy="15" r="2" class="glosnik"/>
-                                <rect x="0" y="0" width="15" height="30" class="glosnik"/>
-                                <polygon points="3,13.5 3,17.5 8,17.5 12,22.5 12,7.5 8,13.5" style="fill: #b1b2b4"/>
-                            </svg>
-                            <div class="pojemnikNaTekst" style="width: 165px;"><p>-===-</p></div>
-                            <svg class="ludek" x="0" y="0" width="30" height="30">
-                                <circle cx=13 cy="20" r="5"/>
-                                <circle cx=17 cy="20" r="5"/>
-                                <rect x="13" y="15" width="5" height="10"/>
-                                <circle cx=15 cy="10" r="4"/>
-                                <rect x="23" y="3" width="1" height="8"/>
-                                <rect x="19.5" y="6.5" width="8" height="1"/>
-                            </svg>
-                        </div>
-                        <div class="kanalGlosowy">
-                            <svg x="0" y="0" width="30" height="30">
-                                <circle cx=15 cy="15" r="8" style="fill: #b1b2b4"/>
-                                <circle cx=15 cy="15" r="6" class="glosnik"/>
-                                <circle cx=15 cy="15" r="4" style="fill: #b1b2b4"/>
-                                <circle cx=15 cy="15" r="2" class="glosnik"/>
-                                <rect x="0" y="0" width="15" height="30" class="glosnik"/>
-                                <polygon points="3,13.5 3,17.5 8,17.5 12,22.5 12,7.5 8,13.5" style="fill: #b1b2b4"/>
-                            </svg>
-                            <div class="pojemnikNaTekst" style="width: 165px;"><p>2Ia#1</p></div>
-                            <svg class="ludek" x="0" y="0" width="30" height="30">
-                                <circle cx=13 cy="20" r="5"/>
-                                <circle cx=17 cy="20" r="5"/>
-                                <rect x="13" y="15" width="5" height="10"/>
-                                <circle cx=15 cy="10" r="4"/>
-                                <rect x="23" y="3" width="1" height="8"/>
-                                <rect x="19.5" y="6.5" width="8" height="1"/>
-                            </svg>
-                        </div>
-                    </div>
-                </details>
-                <div class="footerLewaKolumna">
-                    <div class="zdjProfilowe">
-                        <image src="User-image.png" alt="user image" style="width: 30px; height: 30px; padding: 2px 0px 0px 2px"/>
-                        <svg x="0" y="0" width="20" height="20">
-                            <circle cx="10" cy="10" r="7" style="fill: #292b2f"/>
-                            <circle cx="10" cy="10" r="4.5" style="fill: #747f8d"/>
-                            <circle cx="10" cy="10" r="2.5" style="fill: #292b2f"/>
+                        <svg class="ludek" x="0" y="0" width="30" height="30">
+                            <circle cx=13 cy="20" r="5" />
+                            <circle cx=17 cy="20" r="5" />
+                            <rect x="13" y="15" width="5" height="10" />
+                            <circle cx=15 cy="10" r="4" />
+                            <rect x="23" y="3" width="1" height="8" />
+                            <rect x="19.5" y="6.5" width="8" height="1" />
                         </svg>
                     </div>
-                    <div class="oUserze">
-                        <div class="nick">Orzeszek</div>
-                        <div class="id">#1111</div>
+                    <div class="kanalTekstowy">
+                        <svg x="0" y="0" width="30" height="30">
+                            <polygon points="7,8 8.5,8 6,22 4.5,22" style="fill: #b1b2b4" />
+                            <polygon points="15,8 16.5,8 14,22 12.5,22" style="fill: #b1b2b4" />
+                            <rect x="3" y="12" width="16" height="1.5" style="fill: #b1b2b4" />
+                            <rect x="2" y="16.5" width="16.5" height="1.5" style="fill: #b1b2b4" />
+                        </svg>
+                        <div class="pojemnikNaTekst">
+                            <p>regulamin</p>
+                        </div>
+                        <svg class="ludek" x="0" y="0" width="30" height="30">
+                            <circle cx=13 cy="20" r="5" />
+                            <circle cx=17 cy="20" r="5" />
+                            <rect x="13" y="15" width="5" height="10" />
+                            <circle cx=15 cy="10" r="4" />
+                            <rect x="23" y="3" width="1" height="8" />
+                            <rect x="19.5" y="6.5" width="8" height="1" />
+                        </svg>
                     </div>
-                    <div class="ikony">
-                        <div class="ikona">
-                            <image src="microphone-icon.png" alt="mikrofon"style="height: 20px; width: 20px"/>
+                    <div class="kanalTekstowy">
+                        <svg x="0" y="0" width="30" height="30">
+                            <polygon points="7,8 8.5,8 6,22 4.5,22" style="fill: #b1b2b4" />
+                            <polygon points="15,8 16.5,8 14,22 12.5,22" style="fill: #b1b2b4" />
+                            <rect x="3" y="12" width="16" height="1.5" style="fill: #b1b2b4" />
+                            <rect x="2" y="16.5" width="16.5" height="1.5" style="fill: #b1b2b4" />
+                        </svg>
+                        <div class="pojemnikNaTekst">
+                            <p>ogłoszenia</p>
                         </div>
-                        <div class="ikona">
-                            <image src="headphones-icon.png" alt="słuchawki"style="height: 20px; width: 20px"/>
-                        </div>
-                        <div class="ikona">
-                            <image src="options-icon.png" alt="opcje"style="height: 20px; width: 20px"/>
-                        </div>
+                        <svg class="ludek" x="0" y="0" width="30" height="30">
+                            <circle cx=13 cy="20" r="5" />
+                            <circle cx=17 cy="20" r="5" />
+                            <rect x="13" y="15" width="5" height="10" />
+                            <circle cx=15 cy="10" r="4" />
+                            <rect x="23" y="3" width="1" height="8" />
+                            <rect x="19.5" y="6.5" width="8" height="1" />
+                        </svg>
                     </div>
                 </div>
-            </div>
-            <div class="bottomHeader">
-                <div class="gdzie">
-                    <svg x="0" y="0" width="30" height="30">
-                        <polygon points="7,8 8.5,8 6,22 4.5,22" style="fill: #686c73"/>
-                        <polygon points="15,8 16.5,8 14,22 12.5,22" style="fill: #686c73"/>
-                        <rect x="3" y="12" width="16" height="1.5" style="fill: #686c73"/>
-                        <rect x="2" y="16.5" width="16.5" height="1.5" style="fill: #686c73"/>
+            </details>
+            <details>
+                <summary>
+                    <hr class="pasek">
+                    <p>Klasy drugie - 2</p>
+                    <hr class="pasek">
+                </summary>
+                <div class="zawartoscDetails">
+                    <div class="kanalTekstowy">
+                        <svg x="0" y="0" width="30" height="30">
+                            <polygon points="7,8 8.5,8 6,22 4.5,22" style="fill: #b1b2b4" />
+                            <polygon points="15,8 16.5,8 14,22 12.5,22" style="fill: #b1b2b4" />
+                            <rect x="3" y="12" width="16" height="1.5" style="fill: #b1b2b4" />
+                            <rect x="2" y="16.5" width="16.5" height="1.5" style="fill: #b1b2b4" />
+                        </svg>
+                        <div class="pojemnikNaTekst">
+                            <p>2ia</p>
+                        </div>
+                        <svg class="ludek" x="0" y="0" width="30" height="30">
+                            <circle cx=13 cy="20" r="5" />
+                            <circle cx=17 cy="20" r="5" />
+                            <rect x="13" y="15" width="5" height="10" />
+                            <circle cx=15 cy="10" r="4" />
+                            <rect x="23" y="3" width="1" height="8" />
+                            <rect x="19.5" y="6.5" width="8" height="1" />
+                        </svg>
+                    </div>
+                    <div class="kanalGlosowy" style="height: 110px;">
+                        <svg x="0" y="0" width="30" height="30">
+                            <circle cx=15 cy="15" r="8" style="fill: #b1b2b4" />
+                            <circle cx=15 cy="15" r="6" class="glosnik" />
+                            <circle cx=15 cy="15" r="4" style="fill: #b1b2b4" />
+                            <circle cx=15 cy="15" r="2" class="glosnik" />
+                            <rect x="0" y="0" width="15" height="30" class="glosnik" />
+                            <polygon points="3,13.5 3,17.5 8,17.5 12,22.5 12,7.5 8,13.5" style="fill: #b1b2b4" />
+                        </svg>
+                        <div class="pojemnikNaTekst" style="width: 165px;">
+                            <p>-===-</p>
+                        </div>
+                        <svg class="ludek" x="0" y="0" width="30" height="30">
+                            <circle cx=13 cy="20" r="5" />
+                            <circle cx=17 cy="20" r="5" />
+                            <rect x="13" y="15" width="5" height="10" />
+                            <circle cx=15 cy="10" r="4" />
+                            <rect x="23" y="3" width="1" height="8" />
+                            <rect x="19.5" y="6.5" width="8" height="1" />
+                        </svg>
+                    </div>
+                    <div class="kanalGlosowy">
+                        <svg x="0" y="0" width="30" height="30">
+                            <circle cx=15 cy="15" r="8" style="fill: #b1b2b4" />
+                            <circle cx=15 cy="15" r="6" class="glosnik" />
+                            <circle cx=15 cy="15" r="4" style="fill: #b1b2b4" />
+                            <circle cx=15 cy="15" r="2" class="glosnik" />
+                            <rect x="0" y="0" width="15" height="30" class="glosnik" />
+                            <polygon points="3,13.5 3,17.5 8,17.5 12,22.5 12,7.5 8,13.5" style="fill: #b1b2b4" />
+                        </svg>
+                        <div class="pojemnikNaTekst" style="width: 165px;">
+                            <p>2Ia#1</p>
+                        </div>
+                        <svg class="ludek" x="0" y="0" width="30" height="30">
+                            <circle cx=13 cy="20" r="5" />
+                            <circle cx=17 cy="20" r="5" />
+                            <rect x="13" y="15" width="5" height="10" />
+                            <circle cx=15 cy="10" r="4" />
+                            <rect x="23" y="3" width="1" height="8" />
+                            <rect x="19.5" y="6.5" width="8" height="1" />
+                        </svg>
+                    </div>
+                </div>
+            </details>
+            <div class="footerLewaKolumna">
+                <div class="zdjProfilowe">
+                    <image src="User-image.png" alt="user image"
+                        style="width: 30px; height: 30px; padding: 2px 0px 0px 2px" />
+                    <svg x="0" y="0" width="20" height="20">
+                        <circle cx="10" cy="10" r="7" style="fill: #292b2f" />
+                        <circle cx="10" cy="10" r="4.5" style="fill: #747f8d" />
+                        <circle cx="10" cy="10" r="2.5" style="fill: #292b2f" />
                     </svg>
-                    <p>2ia</p>
                 </div>
-                <div class="znaczek">
-                    <image src="notification-icon.png" alt="notification icon" style="width: 25px; height: 25px;"/>
+                <div class="oUserze">
+                    <div class="nick">Orzeszek</div>
+                    <div class="id">#1111</div>
                 </div>
-                <div class="znaczek">
-                    <image src="pin-icon.png" alt="notification icon" style="width: 25px; height: 25px;"/>
-                </div>
-                <div class="znaczek"style="width: 50px;">
-                    <image src="two-people-icon.png" alt="notification icon" style="width: 50px; height: 25px;"/>
-                </div>
-                <input class="szukajInput" type="text" placeholder="Szukaj"/>
-                <div class="znaczek">
-                    <image src="at-icon.png" alt="notification icon" style="width: 25px; height: 25px;"/>
-                </div>
-                <div class="znaczek">
-                    <image src="help-icon.png" alt="notification icon" style="width: 25px; height: 25px;"/>
-                </div>
-            </div>
-            <div class="chat"> 
-                <div class="pasekNaDole">
-                    <div class="kolorowyPasekNaDole">
-                        <div class="znaczek">
-                            <image src="plus-icon.png" alt="notification icon" style="width: 25px; height: 25px;"/>
-                        </div>
-                        <input class="chatInput" type="text" placeholder="Napisz na #2ia"/>
-                        <div class="znaczek">
-                            <image src="present-icon.png" alt="notification icon" style="width: 25px; height: 25px;"/>
-                        </div>
-                        <div class="znaczek"style="width: 35px;">
-                            <image src="gif-icon.png" alt="notification icon" style="width: 35px; height: 25px;"/>
-                        </div>
-                        <div class="znaczek">
-                            <image src="emoji-icon.png" alt="notification icon" style="width: 25px; height: 25px;"/>
-                        </div>
+                <div class="ikony">
+                    <div class="ikona">
+                        <image src="microphone-icon.png" alt="mikrofon" style="height: 20px; width: 20px" />
                     </div>
-                </div>
-                <div class="wiadomosc">
-                    <div class="zdjProfilowe">
-                        <image src="User-image.png" alt="user image" style="width: 30px; height: 30px; padding: 2px 0px 0px 2px"/>
+                    <div class="ikona">
+                        <image src="headphones-icon.png" alt="słuchawki" style="height: 20px; width: 20px" />
                     </div>
-                    <div class="oUserze"style="width: 40px;">
-                        <div class="nick">User3</div>
-                        <div class="id">&#10084;</div>
+                    <div class="ikona">
+                        <image src="options-icon.png" alt="opcje" style="height: 20px; width: 20px" />
                     </div>
-                    <div class="znaczekBot">24.04.2020</div>
-                </div>
-                <div class="wiadomosc">
-                    <div class="zdjProfilowe"style="background: #ee2225;">
-                        <image src="User-image.png" alt="user image" style="width: 30px; height: 30px; padding: 2px 0px 0px 2px"/>
-                    </div>
-                    <div class="oUserze"style="width: 40px;">
-                        <div class="nick">User2</div>
-                        <div class="id">&#10084;</div>
-                    </div>
-                    <div class="znaczekBot">24.04.2020</div>
-                    <div id="em1" class="emotki">
-                        <image src="emotikona1.png" alt="emoji 1" style="width: 20px; height: 20px;margin: 0 4px 0 4px"/>
-                        9
-                    </div>
-                    <div id="em2" class="emotki">
-                        <image src="emotkiona2.jpg" alt="emoji 2" style="width: 20px; height: 20px;margin: 0 4px 0 4px"/>
-                        6
-                    </div>
-                </div>
-                <div class="wiadomosc">
-                    <div class="zdjProfilowe"style="background: #7289da">
-                        <image src="User-image.png" alt="user image" style="width: 30px; height: 30px; padding: 2px 0px 0px 2px"/>
-                    </div>
-                    <div class="oUserze"style="width: 40px;">
-                        <div class="nick">User1</div>
-                        <div class="id">&#10084;</div>
-                    </div>
-                    <div class="znaczekBot">24.04.2020</div>
-                </div>
-            </div>
-            <div class="prawaKolumna">
-                <div class="pojemnikNaTekst">
-                    <p>-=BOTANICZNY SŁUGUS=-9</p>
-                </div>
-                <div class="bot">
-                    <div class="zdjProfilowe">
-                        <image src="dynamo-bot-icon.png" alt="user image" style="width: 35px; height: 35px;border-radius: 50%;"/>
-                        <svg x="0" y="0" width="20" height="20">
-                            <circle cx="10" cy="10" r="7" style="fill: #292b2f"/>
-                            <circle cx="10" cy="10" r="4.5" style="fill: #43b581"/>
-                        </svg>
-                    </div>
-                    <div class="oUserze">
-                        <div class="nick">Dynamo [?]</div>
-                        <div class="id">W grze dyno.gg</div>
-                    </div>
-                    <div class="znaczekBot"> &#10004; BOT</div>
-                </div>
-                <div class="bot">
-                    <div class="zdjProfilowe">
-                        <image src="marynarz-bot-icon.png" alt="user image" style="width: 35px; height: 35px;border-radius: 50%;"/>
-                        <svg x="0" y="0" width="20" height="20">
-                            <circle cx="10" cy="10" r="7" style="fill: #292b2f"/>
-                            <circle cx="10" cy="10" r="4.5" style="fill: #43b581"/>
-                        </svg>
-                    </div>
-                    <div class="oUserze"style="width: 90px;">
-                        <div class="nick">Marynarz [;;]</div>
-                        <div class="id">W grze music</div>
-                    </div>
-                    <div class="znaczekBot"> &#10004; BOT</div>
-                </div>
-                <div class="bot">
-                    <div class="zdjProfilowe">
-                        <image src="mee6-bot-icon.png" alt="user image" style="width: 35px; height: 35px;border-radius: 50%;"/>
-                        <svg x="0" y="0" width="20" height="20">
-                            <circle cx="10" cy="10" r="7" style="fill: #292b2f"/>
-                            <circle cx="10" cy="10" r="4.5" style="fill: #43b581"/>
-                        </svg>
-                    </div>
-                    <div class="oUserze"style="width: 65px;">
-                        <div class="nick">Miecio [!]</div>
-                        <div class="id"></div>
-                    </div>
-                    <div class="znaczekBot"> &#10004; BOT</div>
                 </div>
             </div>
         </div>
-    </body>
+        <div class="bottomHeader">
+            <div class="gdzie">
+                <svg x="0" y="0" width="30" height="30">
+                    <polygon points="7,8 8.5,8 6,22 4.5,22" style="fill: #686c73" />
+                    <polygon points="15,8 16.5,8 14,22 12.5,22" style="fill: #686c73" />
+                    <rect x="3" y="12" width="16" height="1.5" style="fill: #686c73" />
+                    <rect x="2" y="16.5" width="16.5" height="1.5" style="fill: #686c73" />
+                </svg>
+                <p>2ia</p>
+            </div>
+            <div class="znaczek">
+                <image src="notification-icon.png" alt="notification icon" style="width: 25px; height: 25px;" />
+            </div>
+            <div class="znaczek">
+                <image src="pin-icon.png" alt="notification icon" style="width: 25px; height: 25px;" />
+            </div>
+            <div class="znaczek" style="width: 50px;">
+                <image src="two-people-icon.png" alt="notification icon" style="width: 50px; height: 25px;" />
+            </div>
+            <input class="szukajInput" type="text" placeholder="Szukaj" />
+            <div class="znaczek">
+                <image src="at-icon.png" alt="notification icon" style="width: 25px; height: 25px;" />
+            </div>
+            <div class="znaczek">
+                <image src="help-icon.png" alt="notification icon" style="width: 25px; height: 25px;" />
+            </div>
+        </div>
+        <div class="chat">
+            <div class="pasekNaDole">
+                <div class="kolorowyPasekNaDole">
+                    <div class="znaczek">
+                        <image src="plus-icon.png" alt="notification icon" style="width: 25px; height: 25px;" />
+                    </div>
+                    <input class="chatInput" type="text" placeholder="Napisz na #2ia" />
+                    <div class="znaczek">
+                        <image src="present-icon.png" alt="notification icon" style="width: 25px; height: 25px;" />
+                    </div>
+                    <div class="znaczek" style="width: 35px;">
+                        <image src="gif-icon.png" alt="notification icon" style="width: 35px; height: 25px;" />
+                    </div>
+                    <div class="znaczek">
+                        <image src="emoji-icon.png" alt="notification icon" style="width: 25px; height: 25px;" />
+                    </div>
+                </div>
+            </div>
+            <div class="wiadomosc">
+                <div class="zdjProfilowe">
+                    <image src="User-image.png" alt="user image"
+                        style="width: 30px; height: 30px; padding: 2px 0px 0px 2px" />
+                </div>
+                <div class="oUserze" style="width: 40px;">
+                    <div class="nick">User3</div>
+                    <div class="id">&#10084;</div>
+                </div>
+                <div class="znaczekBot">24.04.2020</div>
+            </div>
+            <div class="wiadomosc">
+                <div class="zdjProfilowe" style="background: #ee2225;">
+                    <image src="User-image.png" alt="user image"
+                        style="width: 30px; height: 30px; padding: 2px 0px 0px 2px" />
+                </div>
+                <div class="oUserze" style="width: 40px;">
+                    <div class="nick">User2</div>
+                    <div class="id">&#10084;</div>
+                </div>
+                <div class="znaczekBot">24.04.2020</div>
+                <div id="em1" class="emotki">
+                    <image src="emotikona1.png" alt="emoji 1" style="width: 20px; height: 20px;margin: 0 4px 0 4px" />
+                    9
+                </div>
+                <div id="em2" class="emotki">
+                    <image src="emotkiona2.jpg" alt="emoji 2" style="width: 20px; height: 20px;margin: 0 4px 0 4px" />
+                    6
+                </div>
+            </div>
+            <div class="wiadomosc">
+                <div class="zdjProfilowe" style="background: #7289da">
+                    <image src="User-image.png" alt="user image"
+                        style="width: 30px; height: 30px; padding: 2px 0px 0px 2px" />
+                </div>
+                <div class="oUserze" style="width: 40px;">
+                    <div class="nick">User1</div>
+                    <div class="id">&#10084;</div>
+                </div>
+                <div class="znaczekBot">24.04.2020</div>
+            </div>
+        </div>
+        <div class="prawaKolumna">
+            <div class="pojemnikNaTekst">
+                <p>-=BOTANICZNY SŁUGUS=-9</p>
+            </div>
+            <div class="bot">
+                <div class="zdjProfilowe">
+                    <image src="dynamo-bot-icon.png" alt="user image"
+                        style="width: 35px; height: 35px;border-radius: 50%;" />
+                    <svg x="0" y="0" width="20" height="20">
+                        <circle cx="10" cy="10" r="7" style="fill: #292b2f" />
+                        <circle cx="10" cy="10" r="4.5" style="fill: #43b581" />
+                    </svg>
+                </div>
+                <div class="oUserze">
+                    <div class="nick">Dynamo [?]</div>
+                    <div class="id">W grze dyno.gg</div>
+                </div>
+                <div class="znaczekBot"> &#10004; BOT</div>
+            </div>
+            <div class="bot">
+                <div class="zdjProfilowe">
+                    <image src="marynarz-bot-icon.png" alt="user image"
+                        style="width: 35px; height: 35px;border-radius: 50%;" />
+                    <svg x="0" y="0" width="20" height="20">
+                        <circle cx="10" cy="10" r="7" style="fill: #292b2f" />
+                        <circle cx="10" cy="10" r="4.5" style="fill: #43b581" />
+                    </svg>
+                </div>
+                <div class="oUserze" style="width: 90px;">
+                    <div class="nick">Marynarz [;;]</div>
+                    <div class="id">W grze music</div>
+                </div>
+                <div class="znaczekBot"> &#10004; BOT</div>
+            </div>
+            <div class="bot">
+                <div class="zdjProfilowe">
+                    <image src="mee6-bot-icon.png" alt="user image"
+                        style="width: 35px; height: 35px;border-radius: 50%;" />
+                    <svg x="0" y="0" width="20" height="20">
+                        <circle cx="10" cy="10" r="7" style="fill: #292b2f" />
+                        <circle cx="10" cy="10" r="4.5" style="fill: #43b581" />
+                    </svg>
+                </div>
+                <div class="oUserze" style="width: 65px;">
+                    <div class="nick">Miecio [!]</div>
+                    <div class="id"></div>
+                </div>
+                <div class="znaczekBot"> &#10004; BOT</div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

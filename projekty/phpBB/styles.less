@@ -19,7 +19,7 @@
 }
 //Mapy - koniec
 //Zmienne
-@maxWysokoscStrony: 1920px;
+@maxWysokoscStrony: 1920px; 
 @wysokoscLini: 78px;
 //Zmienne - koniec
 body {margin: 0;padding: 0;background: @kolory[tloStrony];box-sizing: border-box;font-family: Verdana, Helvetica, Arial, sans-serif;}
@@ -477,101 +477,3 @@ body {margin: 0;padding: 0;background: @kolory[tloStrony];box-sizing: border-box
         }
     }
 }
-//media
-@media (max-width: 1000px){
-    @maxWysokoscStrony: 2200px !important;
-    body {
-        background: white;
-    }
-    .tresc {
-        grid-template-rows: 94px 70px 40px 45px 220px 315px 315px 405px 220px 60px 60px 60px 60px 60px !important;
-    }
-    .linia {
-        height: @wysokoscLini + 10px !important;
-    }
-    .cell {
-        height: @wysokoscLini + 10px;
-    }
-}
-//media
-@media (max-width: 800px) {
-    body {
-        width: 97.5vw;
-    }
-    .body {
-        width: 97.5vw;
-        box-shadow: none;
-        .cieniowanie {
-            width: 97.5vw;
-            box-shadow: none;
-            .tresc {
-                width: 97.5vw;
-            }
-        }
-    }
-    .tresc {
-        grid-template-columns: auto !important;
-        grid-template-rows: 94px 70px 40px 25px 240px 345px 345px 445px 240px 70px 60px 60px 60px 60px !important;
-        .header {
-            grid-column: ~"1" !important;
-            grid-template-columns: auto 350px auto !important;
-            border-radius: 0px !important;
-            .logoINaglowek {
-                width: 350px;
-                grid-column: ~"2" !important;
-                .logo {
-                    display: none;
-                }
-            }
-            .pasekWyszukiwania {
-                display: none !important;
-            }
-        }
-        .nawigacja {
-            grid-column: ~"1" !important;
-            border-radius: 0px !important;
-        }
-        .link {
-            grid-column: ~"1" !important;
-            border-radius: 0px !important;
-        }
-        .dataDiv {
-            grid-column: ~"1" !important;
-        }
-        .forum {
-            grid-column: ~"1" !important;
-            border-radius: 0px !important;
-            .gora {
-                grid-template-columns: auto 110px auto !important;
-            }
-            .gora .cell{
-                display: none !important;
-            }
-            #col1 {
-                display: block !important;
-                grid-column: ~"2" !important;
-            }
-        }
-        #for1 {grid-column: ~"1" !important;}
-        #for2 {grid-column: ~"1" !important;}
-        #for3 {grid-column: ~"1" !important;}
-        #for4 {grid-column: ~"1" !important;}
-        #for5 {grid-column: ~"1" !important;}
-        .stopka {
-            grid-column: ~"1" !important;
-            border-radius: 0px !important;
-            grid-template-columns: 120px auto 200px !important;
-            .prawa p a {
-                display: none !important;
-            }
-        }
-    }
-    .linia {
-        height: @wysokoscLini + 20px !important;
-        grid-template-columns: 50px auto 86px 86px 212px !important;
-    }
-    .cell {
-        height: @wysokoscLini + 20px;
-    }
-}
-//koniec medii
